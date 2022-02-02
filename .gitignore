@@ -58,12 +58,17 @@ atlassian*
 !/pub/media/tmp/.htaccess
 /pub/media/captcha/*
 /pub/static/*
-!/pub/static/.htaccess
+/pub/static/.htaccess
+
+/app/etc/NonComposerComponentRegistration.php
+/app/etc/db_schema.xml
+/app/etc/di.xml
+/app/etc/registration_globlist.php
 
 /var/*
-!/var/.htaccess
+/var/.htaccess
 /vendor/*
 !/vendor/.htaccess
 /generated/*
-!/generated/.htaccess
+/generated/.htaccess
 .DS_Store
