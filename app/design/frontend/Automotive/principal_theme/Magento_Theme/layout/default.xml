@@ -8,9 +8,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <referenceBlock name='logo'>
         <arguments>
-            <argument name='logo_width' xsi:type='number'>300</argument>
-            <argument name='logo_height' xsi:type='number'>300</argument>
+            <argument name='logo_width' xsi:type='number'>100</argument>
+            <argument name='logo_height' xsi:type='number'>100</argument>
             <argument name='logo_file' xsi:type='string'>images/logo-template.png</argument>
         </arguments>
     </referenceBlock>
+    <move element="catalog.topnav" destination="header-wrapper"/>
+
 </page>
