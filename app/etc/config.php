@@ -302,6 +302,7 @@ return [
         'Vertex_AddressValidation' => 1,
         'Webjump_Carbono' => 1,
         'Webjump_CarbonoSales' => 1,
+        'Webjump_ChangeText' => 1,
         'Webjump_CmsPageTranslator' => 1,
         'Webjump_Configuration' => 1,
         'Webjump_CoreConfigurator' => 1,
