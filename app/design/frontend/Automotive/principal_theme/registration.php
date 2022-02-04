@@ -2,6 +2,6 @@
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::THEME,
-    'frontend/Automotive_Theme/Automotive',
+    'frontend/Automotive/principal_theme',
     __DIR__
 );
