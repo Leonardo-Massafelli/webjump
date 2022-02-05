@@ -19,9 +19,9 @@
  *
  */
 module.exports = {
-    automotivo: {
+    Automotivo: {
         area: "frontend",
-        name: "Automotive_Theme/Automotive",
+        name: "Automotive/principal_theme",
         locale: "pt_BR",
         files: ["css/styles-m", "css/styles-l"],
         dsl: "less",
