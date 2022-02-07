@@ -5,14 +5,45 @@
  * See COPYING.txt for license details.
  */
 -->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <referenceBlock name='logo'>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<referenceBlock name="logo">
         <arguments>
-            <argument name='logo_width' xsi:type='number'>100</argument>
-            <argument name='logo_height' xsi:type='number'>100</argument>
+            <argument name='logo_width' xsi:type="number">100</argument>
+            <argument name='logo_height' xsi:type="number">100</argument>
             <argument name='logo_file' xsi:type='string'>images/logo-template.png</argument>
         </arguments>
     </referenceBlock>
-    <move element="catalog.topnav" destination="header-wrapper"/>
 
+    <move element="catalog.topnav" destination='header-wrapper'/>
+
+    <referenceBlock name='copyright' remove='true'/>
+    <referenceBlock name='footer_links' remove='true'/>
+
+    <referenceContainer name='footer-container'>
+    <container name='footer.links.container' htmlTag='div' htmlClass='footer-links-container'>
+        <block class="Magento\Cms\Block\Block" as='footer_links_block1' before='-'>
+            <arguments>
+                <argument name='block_id' xsi:type='number'>3</argument>
+            </arguments>
+        </block>
+        <block class="Magento\Cms\Block\Block" as='footer_links_block2' after='footer_links_block1'>
+            <arguments>
+                <argument name='block_id' xsi:type='number'>4</argument>
+            </arguments>
+        </block>
+        <block class="Magento\Cms\Block\Block" as='footer_links_block3' after='footer_links_block2'>
+            <arguments>
+                <argument name='block_id' xsi:type='number'>5</argument>
+            </arguments>
+        </block>
+    </container>
+    </referenceContainer>
+
+    <referenceBlock name="catalog.topnav">
+        <block class="Magento\Cms\Block\Block" as='suporte_login'>
+            <arguments>
+                <argument name='block_id' xsi:type='number'>6</argument>
+            </arguments>
+        </block>
+    </referenceBlock>
 </page>
