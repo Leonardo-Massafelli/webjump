@@ -38,4 +38,12 @@
         </block>
     </container>
     </referenceContainer>
+
+    <referenceBlock name="catalog.topnav">
+        <block class="Magento\Cms\Block\Block" as='suporte_login'>
+            <arguments>
+                <argument name='block_id' xsi:type='number'>6</argument>
+            </arguments>
+        </block>
+    </referenceBlock>
 </page>

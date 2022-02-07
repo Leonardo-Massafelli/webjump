@@ -19,6 +19,13 @@
  *
  */
 module.exports = {
+    Festa: {
+        area: "frontend",
+        name: "Festa/principal_theme",
+        locale: "pt_BR",
+        files: ["css/styles-m", "css/styles-l"],
+        dsl: "less",
+    },
     Automotivo: {
         area: "frontend",
         name: "Automotive/principal_theme",
