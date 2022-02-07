@@ -93,7 +93,7 @@ class CreateWebsites implements DataPatchInterface
                 $website->setDefaultGroupId($group->getId());
                 $this->websiteResourceModel->save($website);
 
-                //creating storeviews
+                //creating  storeviews
                 $aux = [];
                 $i = 0;
 

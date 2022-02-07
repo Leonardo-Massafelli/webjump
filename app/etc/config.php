@@ -313,4 +313,5 @@ return [
         'Webjump_ViaCep' => 1,
         'Yotpo_Yotpo' => 1
     ]
+    
 ];
