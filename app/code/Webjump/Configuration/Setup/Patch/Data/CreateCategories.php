@@ -3,15 +3,12 @@
 namespace Webjump\Configuration\Setup\Patch\Data;
 
 use Magento\Catalog\Api\CategoryRepositoryInterface;
-use Magento\Catalog\Model\Category;
 use Magento\Catalog\Model\CategoryFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-use Magento\Framework\Setup\Patch\PatchInterface;
-use Magento\Setup\Model\Bootstrap;
 use Magento\Catalog\Model\ResourceModel\Category\CollectionFactory;
 
-class CreateSubCategoriesAutomotivo implements DataPatchInterface
+class CreateCategories implements DataPatchInterface
 {
 
     /**
@@ -41,7 +38,7 @@ class CreateSubCategoriesAutomotivo implements DataPatchInterface
 
     public static function getDependencies()
     {
-        return[];
+        return[CreateRootCategories::class];
     }
 
     public function getAliases()
@@ -53,26 +50,43 @@ class CreateSubCategoriesAutomotivo implements DataPatchInterface
     {
         $this->moduleDataSetup->getConnection()->startSetup();
 
-        $categoryTitle = 'Automotivo';
+        //creating categories for Automotivo root category
+        $categoryIdAutomotivo = $this->getCategoryId('Automotivo');
 
-        $collection = $this->collectionFactory->create()->addAttributeToFilter('name', $categoryTitle)->setPageSize(1);
+        $categoriesAutomotivo = ['Volt 3', 'Volt SX', 'Roadmaster', 'Acessories'];
+
+        $this->createCategories($categoryIdAutomotivo, $categoriesAutomotivo);
+
+        //creating categories for Festa root category
+        $categoryIdFesta = $this->getCategoryId('Festa');
+
+        $categoriesFesta = ['Datas comemorativas', 'Festa temática', 'Festa infantil', 'Balões e bexigas', 'Decoração'];
+
+        $this->createCategories($categoryIdFesta, $categoriesFesta);
+
+        $this->moduleDataSetup->getConnection()->endSetup();
+
+    }
+
+    private function getCategoryId($nome)
+    {
+        $collection = $this->collectionFactory->create()->addAttributeToFilter('name', $nome)->setPageSize(1);
 
         if ($collection->getSize()){
             $categoryId = $collection->getFirstItem()->getId();
         }
 
-        $subCategories = ['Volt 3', 'Volt SX', 'Roadmaster', 'Acessories'];
+        return $categoryId;
+    }
 
-        foreach ($subCategories as $nome){
+    private function createCategories($categoryId, $categorias)
+    {
+        foreach ($categorias as $nome){
             $automotivoCategory = $this->categoryFactory->create();
-            $automotivoCategory->isObjectNew(true);
             $automotivoCategory->setName($nome)
                 ->setParentId($categoryId)
                 ->setIsActive(true);
             $this->categoryRepository->save($automotivoCategory);
         }
-
-        $this->moduleDataSetup->getConnection()->endSetup();
-
     }
 }
