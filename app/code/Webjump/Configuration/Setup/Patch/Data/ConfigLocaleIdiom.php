@@ -2,6 +2,7 @@
 
 namespace Webjump\Configuration\Setup\Patch\Data;
 
+use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
@@ -38,6 +39,13 @@ class ConfigLocaleIdiom implements DataPatchInterface
     public function apply()
     {
         $this->moduleDataSetup->getConnection()->startSetup();
+
+        $this->config->saveConfig(
+            'system/currency/installed',
+            'BRL, USD',
+            ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
+            0
+        );
 
         //Configuring locale for automotivo
         $automotivoEn = $this->storeRepository->get(CreateWebsites::AUTOMOTIVO_EN_STORE_CODE)->getId();
