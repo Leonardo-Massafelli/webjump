@@ -42,7 +42,7 @@ class ConfigLocaleIdiom implements DataPatchInterface
 
         $this->config->saveConfig(
             'system/currency/installed',
-            'BRL, USD',
+            'BRL,USD',
             ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
             0
         );
