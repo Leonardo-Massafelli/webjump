@@ -48,7 +48,7 @@ class CreateAttributeCategories implements DataPatchInterface
             'default' => '',
             'required' => false,
             'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
-            'group' => 'General'
+            'group'    => 'General',
         ]);
 
 
@@ -62,7 +62,7 @@ class CreateAttributeCategories implements DataPatchInterface
             'default' => '',
             'required' => false,
             'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
-            'group' => 'General'
+            'group'    => 'General',
         ]);
 
         $this->moduleDataSetup->getConnection()->endSetup();
