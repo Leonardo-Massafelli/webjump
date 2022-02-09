@@ -1,0 +1,85 @@
+// Footer
+
+.page-footer {
+    background-color: @lighter-black;
+
+    .footer-links-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 69px;
+
+        .footer-links {
+            height: 200px;
+            width: 175px;
+
+            h3 {
+                color: @white;
+                font-family: "chakraPetch";
+                margin-bottom: 19px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    &:hover {
+                        font-size: 1.6rem;
+                    }
+                    a {
+                        cursor: pointer;
+                        color: @white;
+                        text-decoration: none;
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 100;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .form.subscribe {
+        margin-top: 70px;
+        .field.newsletter {
+            .control {
+                &:before {
+                    content: "";
+                }
+                input {
+                    background: @lighter-black;
+                    color: @white;
+                    padding: 0 0 0 0.7rem;
+                    width: 365px;
+                    height: 40px;
+                    border: 1px solid @white;
+                    margin: 0;
+                    font-family: "Montserrat";
+                    font-weight: bold;
+
+                    &::placeholder {
+                        color: #ffffff;
+                        font-family: "Montserrat";
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+
+        .actions {
+            .action.subscribe {
+                color: @lighter-black;
+                border: 1px solid @grey-border;
+                background-color: @white;
+                width: 142px;
+                height: 40px;
+
+                span {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
