@@ -290,7 +290,6 @@ return [
         'Carbono_CalculatorShipping' => 1,
         'Dotdigitalgroup_Email' => 1,
         'Dotdigitalgroup_Chat' => 1,
-        'Ho_Templatehints' => 1,
         'Klarna_Core' => 1,
         'Klarna_Ordermanagement' => 1,
         'Klarna_Onsitemessaging' => 1,
@@ -308,93 +307,10 @@ return [
         'Webjump_CoreConfigurator' => 1,
         'Webjump_CustomerBr' => 1,
         'Webjump_DisableRegistration' => 1,
-        'Webjump_OrderStatus' => 1,
+        'Webjump_OrderStatus' => 0,
         'Webjump_PostCode' => 1,
         'Webjump_ProductIncrementButtons' => 1,
         'Webjump_ViaCep' => 1,
         'Yotpo_Yotpo' => 1
-    ],
-    'scopes' => [
-        'websites' => [
-            'admin' => [
-                'website_id' => '0',
-                'code' => 'admin',
-                'name' => 'Admin',
-                'sort_order' => '0',
-                'default_group_id' => '0',
-                'is_default' => '0'
-            ],
-            'festa' => [
-                'website_id' => '1',
-                'code' => 'festa',
-                'name' => 'Festa',
-                'sort_order' => '1',
-                'default_group_id' => '1',
-                'is_default' => '1'
-            ],
-            'automotivo' => [
-                'website_id' => '2',
-                'code' => 'automotivo',
-                'name' => 'Automotivo',
-                'sort_order' => '2',
-                'default_group_id' => '2',
-                'is_default' => '0'
-            ]
-        ],
-        'groups' => [
-            [
-                'group_id' => '0',
-                'website_id' => '0',
-                'code' => 'default',
-                'name' => 'Default',
-                'root_category_id' => '0',
-                'default_store_id' => '0'
-            ],
-            [
-                'group_id' => '1',
-                'website_id' => '1',
-                'code' => 'festa',
-                'name' => 'Festa Store',
-                'root_category_id' => '2',
-                'default_store_id' => '1'
-            ],
-            [
-                'group_id' => '2',
-                'website_id' => '2',
-                'code' => 'automotivo',
-                'name' => 'Automotivo Store',
-                'root_category_id' => '2',
-                'default_store_id' => '2'
-            ]
-        ],
-        'stores' => [
-            'admin' => [
-                'store_id' => '0',
-                'code' => 'admin',
-                'website_id' => '0',
-                'group_id' => '0',
-                'name' => 'Admin',
-                'sort_order' => '0',
-                'is_active' => '1'
-            ],
-            'festa' => [
-                'store_id' => '1',
-                'code' => 'festa',
-                'website_id' => '1',
-                'group_id' => '1',
-                'name' => 'Festa StoreView',
-                'sort_order' => '0',
-                'is_active' => '1'
-            ],
-            'automotivo' => [
-                'store_id' => '2',
-                'code' => 'automotivo',
-                'website_id' => '2',
-                'group_id' => '2',
-                'name' => 'Automotivo StoreView',
-                'sort_order' => '1',
-                'is_active' => '1'
-            ]
-        ]
     ]
 ];
