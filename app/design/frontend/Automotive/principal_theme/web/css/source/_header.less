@@ -1,0 +1,76 @@
+// Header
+
+.page-header {
+    color: @grey;
+
+    .panel.wrapper {
+        background: @cream-white;
+        color: @grey;
+
+        .panel.header {
+            .header.links {
+                li a {
+                    color: @grey;
+                }
+            }
+        }
+    }
+    .header {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        margin: 0;
+    }
+    .navigation {
+        background: @white;
+        margin-left: 86px;
+
+        ul {
+            display: inline-block;
+
+            li {
+                margin-left: 20px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            li a span {
+                color: @black;
+                font-family: "Montserrat";
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        .suporte-login-links {
+            display: inline-block;
+            margin-left: 20px;
+
+            a {
+                color: @black;
+                font-family: "Montserrat";
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            a:last-child {
+                margin-left: 132px;
+                color: @black;
+                font-family: "Montserrat" sans-serif;
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+}
