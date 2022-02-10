@@ -8,22 +8,26 @@ use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
 use Magento\Framework\App\Config\ConfigResource\ConfigInterface;
 use Magento\Store\Model\ScopeInterface;
+use Magento\Setup\Module\Setup;
 
 class ConfigLocaleIdiom implements DataPatchInterface
 {
     private $moduleDataSetup;
     private $storeRepository;
     private $config;
+    private $setup;
 
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         StoreRepositoryInterface $storeRepository,
-        ConfigInterface $config
+        ConfigInterface $config,
+        Setup $setup
     )
     {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->storeRepository = $storeRepository;
         $this->config = $config;
+        $this->setup = $setup;
     }
 
     public static function getDependencies()
@@ -45,6 +49,12 @@ class ConfigLocaleIdiom implements DataPatchInterface
             'BRL,USD',
             ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
             0
+        );
+
+        $this->setup->getConnection()->insertArray(
+            'directory_currency_rate',
+            ['currency_from', 'currency_to', 'rate'],
+            [['BRL', 'USD', 0.19104321]]
         );
 
         //Configuring locale for automotivo
