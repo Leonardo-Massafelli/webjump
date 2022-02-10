@@ -13,5 +13,5 @@
             <argument name='logo_file' xsi:type='string'>images/festa-logo.png</argument>
         </arguments>
     </referenceBlock>
-    
+    <referenceBlock name="show_part" remove='true'/>
 </page>

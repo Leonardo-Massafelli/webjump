@@ -52,7 +52,7 @@ class SuporteLogin
         $headerNoticeData = [
             'title' => 'suport-login-link',
             'identifier' => self::BLOCK_IDENTIFIER,
-            'content' => '<div class="suporte-login-links"><a>Support</a> <a>Login</a></div>',
+            'content' => '<div class="suporte-login-links"><a>Support</a> <a href="http://automotivo.develop.com.br/customer/account/login/referer/aHR0cDovL2F1dG9tb3Rpdm8uZGV2ZWxvcC5jb20uYnIvP2F0aD0x/" class="suporte-login-links__login">Login</a></div>',
             'stores' => [$automotivo->getId(),$automotivo_en->getId()],
             'is_active' => 1,
         ];

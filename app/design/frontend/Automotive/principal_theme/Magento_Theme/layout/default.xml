@@ -46,4 +46,6 @@
             </arguments>
         </block>
     </referenceBlock>
+
+    <move element="store_language" destination='header.links' after='register-link'/>
 </page>
