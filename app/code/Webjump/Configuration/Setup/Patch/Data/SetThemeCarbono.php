@@ -39,7 +39,7 @@ class SetThemeCarbono implements DataPatchInterface
 
     public static function getDependencies()
     {
-       return [];
+       return [CreateWebsites::class];
     }
 
     public function getAliases()

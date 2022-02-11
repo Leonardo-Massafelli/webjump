@@ -2,12 +2,11 @@
 
 namespace Webjump\Configuration\Setup\Patch\Data;
 
-use Laminas\Filter\ToInt;
-use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Config\Storage\WriterInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\View\Design\Theme\ThemeProviderInterface;
+use Magento\Store\Api\WebsiteRepositoryInterface;
 use Magento\Store\Model\ScopeInterface;
 
 class SetThemeFesta implements DataPatchInterface
@@ -24,22 +23,28 @@ class SetThemeFesta implements DataPatchInterface
      * @var ThemeProviderInterface
      */
     private $themeProvider;
+    /**
+     * @var WebsiteRepositoryInterface
+     */
+    private $websiteRepository;
 
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         WriterInterface $writer,
-        ThemeProviderInterface $themeProvider
+        ThemeProviderInterface $themeProvider,
+        WebsiteRepositoryInterface $websiteRepository
     )
     {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->writer = $writer;
         $this->themeProvider = $themeProvider;
+        $this->websiteRepository = $websiteRepository;
     }
 
 
     public static function getDependencies()
     {
-       return [];
+        return [CreateWebsites::class, SetThemeCarbono::class];
     }
 
     public function getAliases()
@@ -51,17 +56,17 @@ class SetThemeFesta implements DataPatchInterface
     {
         $this->moduleDataSetup->getConnection()->startSetup();
 
-        $theme = $this->themeProvider->getThemeByFullPath("frontend/Festa");
+        $festaId = $this->websiteRepository->get(CreateWebsites::FESTA_WEBSITE_CODE)->getId();
+
+        $theme = $this->themeProvider->getThemeByFullPath("frontend/Festa/principal_theme");
 
         $scopes = [
-            ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
-            ScopeInterface::SCOPE_STORES
+            ScopeInterface::SCOPE_WEBSITES
         ];
 
         foreach ($scopes as $scope){
-            $this->writer->save('design/theme/theme_id', $theme->getId(), $scope);
+            $this->writer->save('design/theme/theme_id', $theme->getId(), $scope, $festaId);
         }
-
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }
