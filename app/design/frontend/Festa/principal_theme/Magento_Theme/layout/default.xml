@@ -13,5 +13,9 @@
             <argument name='logo_file' xsi:type='string'>images/festa-logo.png</argument>
         </arguments>
     </referenceBlock>
+
+
+    <referenceBlock name='copyright' remove='true'/>
+    <referenceBlock name='footer_links' remove='true'/>
     
 </page>
