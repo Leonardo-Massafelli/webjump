@@ -17,5 +17,31 @@
 
     <referenceBlock name='copyright' remove='true'/>
     <referenceBlock name='footer_links' remove='true'/>
-    
+
+    <referenceContainer name='footer-container'>
+    <container name='footer.links.container' htmlTag='div' htmlClass='footer-links-container'>
+        <block class="Magento\Cms\Block\Block" as='institucional' before='-'>
+            <arguments>
+                <argument name='block_id' xsi:type='string'>institucional</argument>
+            </arguments>
+        </block>
+        <block class="Magento\Cms\Block\Block" as='conta' after='institucional'>
+            <arguments>
+                <argument name='block_id' xsi:type='string'>conta</argument>
+            </arguments>
+        </block>
+        <block class="Magento\Cms\Block\Block" as='suporte' after='conta'>
+            <arguments>
+                <argument name='block_id' xsi:type='string'>suporte</argument>
+            </arguments>
+        </block>
+        <block class="Magento\Cms\Block\Block" as='festival' after='suporte'>
+            <arguments>
+                <argument name='block_id' xsi:type='string'>festival</argument>
+            </arguments>
+        </block>
+    </container>
+    </referenceContainer>
+    <move element="form.subscribe" destination="footer.links.container" after="-"/>
+
 </page>

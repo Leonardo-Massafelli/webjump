@@ -27,9 +27,10 @@
 
     .block.block-search {
         width: 100%;
-        max-width: 300px;
+        max-width: 310px;
 
         .block-content {
+            
             .action.search {
                 right: 10px;
                 top: 10px;
@@ -45,16 +46,19 @@
         }
     
         #search.input-text{
-            font-family: "Poppins";
+            color: @grey;
             font-size: 15px;
             font-weight: 500;
-            color: @grey;
+            font-family: "Poppins";
             letter-spacing: 0.38px;
+            border: 1px solid #a6a6a6;
         }
     }
 
     .minicart-wrapper{
+        
         .action.showcart{
+
             &::before{
                 content: '';
                 display: block;
@@ -67,16 +71,25 @@
     }
 
 }
-.navigation {
-    background: @white;
 
-    li a span {
-        color: @bright-grey;
-        font-family: "Poppins";
-        font-size: 16px;
-        font-weight: 500;
+.sections.nav-sections{
+
+    .section-item-content{
+        background: @white;
+
+        .navigation {
+            background: @white;
+        
+            li a span {
+                color: @bright-grey;
+                font-family: "poppins";
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
     }
 }
+
 
 
 
