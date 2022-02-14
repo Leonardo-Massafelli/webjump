@@ -81,12 +81,26 @@ class ConfigLocaleIdiom implements DataPatchInterface
             $automotivoEn
         );
 
+        $this->config->saveConfig(
+            'general/country/allow',
+            'US',
+            ScopeInterface::SCOPE_STORES,
+            $automotivoEn
+        );
+
         //Configuring locale for festa
         $festaEn = $this->storeRepository->get(CreateWebsites::FESTA_EN_STORE_CODE)->getId();
 
         $this->config->saveConfig(
             'general/locale/code',
             'en_US',
+            ScopeInterface::SCOPE_STORES,
+            $festaEn
+        );
+
+        $this->config->saveConfig(
+            'general/country/allow',
+            'US',
             ScopeInterface::SCOPE_STORES,
             $festaEn
         );

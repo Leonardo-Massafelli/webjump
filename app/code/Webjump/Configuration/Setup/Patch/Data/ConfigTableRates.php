@@ -10,7 +10,11 @@ use Magento\Setup\Module\Setup;
 use Magento\Store\Api\WebsiteRepositoryInterface;
 use Magento\OfflineShipping\Model\ResourceModel\Carrier\Tablerate;
 use Magento\Framework\ObjectManagerInterface;
+use Magento\Store\Model\ScopeInterface;
 use Webjump\Configuration\Setup\Patch\Data\CreateWebsites;
+use Magento\Store\Api\StoreRepositoryInterface;
+
+
 
 
 class ConfigTableRates implements DataPatchInterface
@@ -35,7 +39,7 @@ class ConfigTableRates implements DataPatchInterface
      * @var WebsiteRepositoryInterface
      */
     private $websiteRepositoryInterface;
-
+    private $storeRepository;
 
 
     public function __construct(
@@ -43,7 +47,8 @@ class ConfigTableRates implements DataPatchInterface
         ConfigInterface $configInterface,
         Csv $csv,
         Setup $setup,
-        WebsiteRepositoryInterface $websiteRepositoryInterface
+        WebsiteRepositoryInterface $websiteRepositoryInterface,
+        StoreRepositoryInterface $storeRepository
     )
     {
         $this->moduleDataSetup = $moduleDataSetup;
@@ -51,6 +56,7 @@ class ConfigTableRates implements DataPatchInterface
         $this->csv = $csv;
         $this->setup = $setup;
         $this->websiteRepositoryInterface = $websiteRepositoryInterface;
+        $this->storeRepository = $storeRepository;
     }
 
 
@@ -74,18 +80,28 @@ class ConfigTableRates implements DataPatchInterface
     public function DataConfig() : array {
         return [
             ['carriers/tablerate/active', true],
-            ['carriers/tablerate/title', 'Webjump Delivery'],
-            ['carriers/tablerate/name', 'Webjump Delivery Method'],
+            ['carriers/tablerate/title', 'Webjump Entregas'],
+            ['carriers/tablerate/name', 'Método de entregas da Webjump'],
             ['carriers/tablerate/condition_name', 'package_value_with_discount'],
             ['carriers/tablerate/include_virtual_price', true],
             ['carriers/tablerate/handling_type', 'F'],
             ['carriers/tablerate/handling_fee', '6.0'],
-            ['carriers/tablerate/specificerrmsg', 'This shipping method is not available. To use this shipping method, please contact us'],
+            ['carriers/tablerate/specificerrmsg', 'Esse método de entrega não está disponível no momento'],
             ['carriers/tablerate/sallowspecific', true],
             ['carriers/tablerate/specificcountry', 'BR,US'],
             ['carriers/tablerate/sort_order', 0],
         ];
     }
+
+
+    public function DataConfigEn() : array {
+        return [
+            ['carriers/tablerate/title', 'Webjump Delivers'],
+            ['carriers/tablerate/name', 'Webjump Delivers Method'],
+            ['carriers/tablerate/specificerrmsg', 'This delivery method is currently not available'],
+        ];
+    }
+
 
     public function apply()
     {
@@ -98,6 +114,28 @@ class ConfigTableRates implements DataPatchInterface
         }
 
         $this->importTable(self::TABLE_RATES_FILE);
+
+        $transLabel = $this->DataConfigEn();
+
+        $automotivoEN = $this->storeRepository->get(CreateWebsites::AUTOMOTIVO_EN_STORE_CODE)->getId();
+        foreach ($transLabel as $label){
+            $this->configInterface->saveConfig(
+                $label[0],
+                $label[1],
+                ScopeInterface::SCOPE_STORES,
+                $automotivoEN
+            );
+        }
+
+        $festaEN = $this->storeRepository->get(CreateWebsites::FESTA_EN_STORE_CODE)->getId();
+        foreach ($transLabel as $label){
+            $this->configInterface->saveConfig(
+                $label[0],
+                $label[1],
+                ScopeInterface::SCOPE_STORES,
+                $festaEN
+            );
+        }
 
         $this->moduleDataSetup->getConnection()->endSetup();
 
