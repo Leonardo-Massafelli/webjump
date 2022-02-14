@@ -41,5 +41,4 @@
         </block>
     </container>
     </referenceContainer>
-    <move element="form.subscribe" destination="footer.links.container" after="-"/>
 </page>
