@@ -18,11 +18,11 @@ use Magento\Store\Api\StoreRepositoryInterface;
  * Class UpdateBlockData
  * @package Techflarestudio\Content\Setup\Patch\Data
  */
-class SuporteLogin
+class FooterLinksFesta1
     implements DataPatchInterface,
     PatchRevertableInterface
 {
-    const BLOCK_IDENTIFIER = 'suport-login-link';
+    const BLOCK_IDENTIFIER = 'institucional';
     /**
      * @var BlockFactory
      */
@@ -46,14 +46,22 @@ class SuporteLogin
     public function apply()
     {
 
-        $automotivo = $this->storeRepository->get(CreateWebsites::AUTOMOTIVO_STORE_CODE);
-        $automotivo_en = $this->storeRepository->get(CreateWebsites::AUTOMOTIVO_EN_STORE_CODE);
+        $festa = $this->storeRepository->get(CreateWebsites::FESTA_STORE_CODE);
+        $festa_en = $this->storeRepository->get(CreateWebsites::FESTA_EN_STORE_CODE);
 
         $headerNoticeData = [
-            'title' => 'suport-login-link',
+            'title' => 'institutional',
             'identifier' => self::BLOCK_IDENTIFIER,
-            'content' => '<div class="suporte-login-links"><a>Support</a> <a href="http://automotivo.develop.com.br/customer/account/login/referer/aHR0cDovL2F1dG9tb3Rpdm8uZGV2ZWxvcC5jb20uYnIvP2F0aD0x/" class="suporte-login-links__login">Login</a></div>',
-            'stores' => [$automotivo->getId(),$automotivo_en->getId()],
+            'content' => '<div>
+            <h3>Institucional</h3>
+            <ul>
+            <li><a>Nossas vantagens</a></li>
+            <li><a>Lojas físicas</a></li>
+            <li><a>Trocas e devoluções</a></li>
+            <li><a>Comprar no atacado</a></li>
+            </ul>
+            </div>',
+            'stores' => [$festa->getId(),$festa_en->getId()],
             'is_active' => 1,
         ];
         $headerNoticeBlock = $this->blockFactory

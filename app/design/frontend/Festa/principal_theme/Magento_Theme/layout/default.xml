@@ -14,7 +14,6 @@
         </arguments>
     </referenceBlock>
 
-
     <referenceBlock name='copyright' remove='true'/>
     <referenceBlock name='footer_links' remove='true'/>
 
@@ -43,5 +42,4 @@
     </container>
     </referenceContainer>
     <move element="form.subscribe" destination="footer.links.container" after="-"/>
-
 </page>
