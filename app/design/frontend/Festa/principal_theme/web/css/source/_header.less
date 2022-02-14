@@ -1,0 +1,125 @@
+//Header
+
+
+.page-header {
+    background: @white;
+
+    .panel.wrapper {
+        background: @cream-white;
+        color: @grey;
+
+        .panel.header {
+
+            .header.links {
+
+                .greet.welcome{
+                    span{
+                        display: none;
+                    }
+                }
+
+                li a {
+                    color: @lighter-grey;
+                }
+            }
+        }
+    }
+
+    .block.block-search {
+        width: 100%;
+        max-width: 310px;
+
+        .block-content {
+            
+            .action.search {
+                right: 10px;
+                top: 10px;
+                
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    background-color: #666666;
+                    background: url('@{baseDir}images/search.png') no-repeat 50% 50%;
+            }   }
+        }
+    
+        #search.input-text{
+            color: @grey;
+            font-size: 15px;
+            font-weight: 500;
+            font-family: "Poppins-Medium";
+            letter-spacing: 0.38px;
+            border: 1px solid #a6a6a6;
+        }
+    }
+
+    .minicart-wrapper{
+        
+        .action.showcart{
+
+            &::before{
+                content: '';
+                display: block;
+                width: 19px;
+                height: 25px;
+                background: url('@{baseDir}images/bag.png') no-repeat 50% 50%;
+            }
+        }
+
+    }
+
+}
+
+.sections.nav-sections{
+
+    .section-item-content{
+        background: @white;
+
+        .navigation {
+            background: @white;
+        
+            li a span {
+                color: @bright-grey;
+                font-family: "Poppins-Medium";
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+//Media Queries
+
+@media screen and (max-width:845px) {
+    .sections.nav-sections{
+        .section-item-content{
+            .navigation{
+                ul{
+                    li{
+                        a{
+                            span{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:767px) {
+    .page-header{
+        .block.block-search{
+            width: 100%;
+            max-width: 100%;
+        }
+    } 
+}
+
+
+
