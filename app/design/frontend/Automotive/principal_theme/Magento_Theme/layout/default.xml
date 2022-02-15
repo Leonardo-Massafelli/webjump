@@ -14,7 +14,7 @@
         </arguments>
     </referenceBlock>
 
-    <move element="catalog.topnav" destination='header-wrapper'/>
+    <!-- <move element="catalog.topnav" destination='header-wrapper' /> -->
 
     <referenceBlock name='copyright' remove='true'/>
     <referenceBlock name='footer_links' remove='true'/>

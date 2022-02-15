@@ -83,9 +83,9 @@ class ConfigLocaleIdiom implements DataPatchInterface
 
         $this->config->saveConfig(
             'general/country/allow',
-            'BR,US',
-            ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
-            0
+            'US',
+            ScopeInterface::SCOPE_STORES,
+            $automotivoEn
         );
 
         //Configuring locale for festa
@@ -94,6 +94,13 @@ class ConfigLocaleIdiom implements DataPatchInterface
         $this->config->saveConfig(
             'general/locale/code',
             'en_US',
+            ScopeInterface::SCOPE_STORES,
+            $festaEn
+        );
+
+        $this->config->saveConfig(
+            'general/country/allow',
+            'US',
             ScopeInterface::SCOPE_STORES,
             $festaEn
         );

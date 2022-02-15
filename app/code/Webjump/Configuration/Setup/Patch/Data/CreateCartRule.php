@@ -8,6 +8,8 @@ use Magento\SalesRule\Model\ResourceModel\Rule;
 use Magento\SalesRule\Model\RuleFactory;
 use Magento\Store\Api\WebsiteRepositoryInterface;
 use Magento\SalesRule\Model\Rule\Condition\CombineFactory;
+use Magento\SalesRule\Model\Rule\Condition\AddressFactory;
+use Magento\SalesRule\Model\Rule\Condition\Address;
 
 class CreateCartRule implements DataPatchInterface
 {
@@ -17,13 +19,15 @@ class CreateCartRule implements DataPatchInterface
         RuleFactory $ruleFactory,
         Rule $rule,
         WebsiteRepositoryInterface $websiteRepository,
-        CombineFactory $combineFactory)
+        CombineFactory $combineFactory,
+        AddressFactory $addressFactory)
     {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->ruleFactory = $ruleFactory;
         $this->rule = $rule;
         $this->websiteRepository = $websiteRepository;
         $this->CombineFactory = $combineFactory;
+        $this->addressFactory = $addressFactory;
     }
 
     public static function getDependencies()
@@ -44,11 +48,22 @@ class CreateCartRule implements DataPatchInterface
         $partyId = $this->websiteRepository->get(CreateWebsites::FESTA_WEBSITE_CODE)->getId();
 
         //Creating the condition to be used in the cart rule
-        $ruleCondition = $this->CombineFactory->create();
-        $ruleCondition->setData('attribute', 'total_qty')
+        $conditionAddress = $this->addressFactory->create();
+
+        $conditionAddress->settype(Address::class)
+            ->setData('attribute', 'total_qty')
             ->setData('operator', '>=')
             ->setData('value', '5')
             ->setData('is_value_processed', 'false');
+
+        $ruleCondition = $this->CombineFactory->create();
+        
+        $ruleCondition->setData('attribute', 'null')
+            ->setData('operator', 'null')
+            ->setData('value', '1')
+            ->setData('is_value_processed', 'null')
+            ->setData('aggregator', 'all')
+            ->setConditions([$conditionAddress]);
 
         //Creating the cart rule
         $cartrule = $this->ruleFactory->create(['setup' => $this->moduleDataSetup]);
