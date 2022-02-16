@@ -15,6 +15,7 @@
     </referenceBlock>
 
     <!-- <move element="catalog.topnav" destination='header-wrapper' /> -->
+    <move element="navigation.sections" destination="header-wrapper" after="logo" />
 
     <referenceBlock name='copyright' remove='true'/>
     <referenceBlock name='footer_links' remove='true'/>
