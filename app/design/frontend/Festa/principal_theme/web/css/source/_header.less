@@ -70,12 +70,14 @@
     .minicart-wrapper{
         margin-top: 2px;
         .action.showcart{
-
+            display: flex;
+            align-items: center;
             &::before{
                 content: '';
                 display: block;
                 width: 19px;
                 height: 25px;
+                margin: 0 10px 0 0;
                 background: url('@{baseDir}images/bag.png') no-repeat 50% 50%;
             }
         }
