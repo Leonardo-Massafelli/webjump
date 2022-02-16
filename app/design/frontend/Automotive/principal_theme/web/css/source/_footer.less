@@ -10,12 +10,15 @@
 
         .footer-links {
             height: 200px;
-            width: 175px;
+            width: 160px;
+            margin-bottom: 30px;
 
             h3 {
                 color: @white;
                 font-family: "chakraPetch";
-                margin-bottom: 19px;
+                margin: 0 0 20px 0;
+                font-size: 16px;
+                font-weight: 600;
             }
 
             ul {
@@ -71,7 +74,8 @@
         .actions {
             .action.subscribe {
                 color: @lighter-black;
-                border: 1px solid @grey-border;
+                // border: 1px solid @grey-border;
+                border: 0;
                 background-color: @white;
                 width: 142px;
                 height: 40px;
@@ -122,6 +126,32 @@
     }
 }
 
+@media screen and (max-width: 957px) {
+    .page-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .footer.content {
+            form.subscribe {
+                .field.newsletter {
+                    .control input {
+                        width: 300px;
+                    }
+                }
+            }
+            .block.newsletter {
+                max-width: 100%;
+            }
+        }
+
+        .footer-links-container {
+            margin-bottom: 50px;
+            width: 100%;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .page-footer {
         display: flex;
@@ -142,6 +172,18 @@
 
 @media screen and (max-width: 552px) {
     .page-footer {
+        .footer.content {
+            form.subscribe {
+                .field.newsletter {
+                    .control input {
+                        width: 170px;
+                    }
+                }
+            }
+            .block.newsletter {
+                max-width: 100%;
+            }
+        }
         .footer-links-container {
             align-items: center;
             display: flex;
