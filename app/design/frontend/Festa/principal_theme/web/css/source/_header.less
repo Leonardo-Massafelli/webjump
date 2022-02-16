@@ -69,9 +69,11 @@
 
     .minicart-wrapper{
         margin-top: 2px;
+
         .action.showcart{
             display: flex;
             align-items: center;
+
             &::before{
                 content: '';
                 display: block;
@@ -79,6 +81,13 @@
                 height: 25px;
                 margin: 0 10px 0 0;
                 background: url('@{baseDir}images/bag.png') no-repeat 50% 50%;
+            }
+
+            .counter.qty{
+                background: @purple;
+                color: @white;
+                font-size: 16px;
+                font-family: "OpenSans-Bold"
             }
         }
 
