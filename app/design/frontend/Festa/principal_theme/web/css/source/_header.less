@@ -13,6 +13,13 @@
 
             .header.links {
 
+                .customer-name{
+
+                    .action.switch::after{
+                        color: @grey;
+                    }
+                }
+
                 .greet.welcome{
                     span{
                         display: none;
@@ -25,11 +32,9 @@
             }
         }
     }
+
+
     
-    .header.content{
-        padding: 0 0 0;
-        margin: 30px 20px 0;
-    }
 
 
     .block.block-search {
@@ -63,7 +68,7 @@
     }
 
     .minicart-wrapper{
-        
+        margin-top: 2px;
         .action.showcart{
 
             &::before{
@@ -125,8 +130,19 @@
             width: 100%;
             max-width: 100%;
         }
+
+        .minicart-wrapper{
+            margin: 10px;
+        }
+
+        .page-header{
+            .header.content{
+                .logo{
+                    margin: 0px 0px 10px 60px;
+                }
+            }
+        } 
     } 
 }
-
 
 
