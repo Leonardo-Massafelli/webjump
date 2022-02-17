@@ -13,6 +13,13 @@
 
             .header.links {
 
+                .customer-name{
+
+                    .action.switch::after{
+                        color: @grey;
+                    }
+                }
+
                 .greet.welcome{
                     span{
                         display: none;
@@ -25,11 +32,9 @@
             }
         }
     }
+
+
     
-    .header.content{
-        padding: 0 0 0;
-        margin: 30px 20px 0;
-    }
 
 
     .block.block-search {
@@ -63,15 +68,26 @@
     }
 
     .minicart-wrapper{
-        
+        margin-top: 2px;
+
         .action.showcart{
+            display: flex;
+            align-items: center;
 
             &::before{
                 content: '';
                 display: block;
                 width: 19px;
                 height: 25px;
+                margin: 0 10px 0 0;
                 background: url('@{baseDir}images/bag.png') no-repeat 50% 50%;
+            }
+
+            .counter.qty{
+                background: @purple;
+                color: @white;
+                font-size: 16px;
+                font-family: "OpenSans-Bold"
             }
         }
 
@@ -125,8 +141,19 @@
             width: 100%;
             max-width: 100%;
         }
+
+        .minicart-wrapper{
+            margin: 10px;
+        }
+
+        .page-header{
+            .header.content{
+                .logo{
+                    margin: 0px 0px 10px 60px;
+                }
+            }
+        } 
     } 
 }
-
 
 

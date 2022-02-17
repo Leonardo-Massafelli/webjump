@@ -3,6 +3,16 @@
 .page-header {
     color: @grey;
 
+    .header.content {
+        // testes
+        display: flex;
+        align-items: center;
+
+        .logo {
+            margin: 0;
+        }
+    }
+
     .panel.wrapper {
         background: @cream-white;
         color: @grey;
@@ -50,7 +60,7 @@
 }
 .sections.nav-sections {
     background: @white;
-    margin: 15px 0 0 0;
+    margin: 0; //teste
 
     .section-item-content {
         .section-item-content {
@@ -112,7 +122,7 @@
                 }
                 &:last-child {
                     .suporte-login-links__login {
-                        margin-left: 86px;
+                        margin-left: 60px;
                         font-weight: bold;
 
                         a {
@@ -233,11 +243,31 @@
             .logo {
                 margin: auto;
             }
+
+            .minicart-wrapper {
+                position: absolute;
+                right: 0;
+                top: 74%;
+                right: 15px;
+            }
         }
     }
 }
 
 @media screen and (max-width: 767px) {
+    .page-header {
+        .header.content {
+            position: relative;
+
+            .minicart-wrapper {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
     .sections.nav-sections {
         .navigation {
             ul {
