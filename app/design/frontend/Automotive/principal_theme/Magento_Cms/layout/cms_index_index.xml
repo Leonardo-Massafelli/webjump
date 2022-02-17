@@ -8,6 +8,6 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     
     <referenceBlock name="page.main.title" remove="true"/>
-    <referenceBlock name="cms_page" remove="true"/>
-    <referenceContainer name="main" remove="true"/>
+    <!-- <referenceBlock name="cms_page" remove="true"/> -->
+    <!-- <referenceContainer name="main" remove="true"/> -->
 </page>
