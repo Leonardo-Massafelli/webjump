@@ -1,7 +1,138 @@
-body {
-    background: #000000;
+body.cms-index-index {
+    background: @black;
     color: @white;
 }
+
+// BANNER
+
+.page-wrapper {
+    .page-main {
+        .column.main {
+            .banner-principal {
+                max-width: 1476px;
+                height: 560px;
+                background-image: url("@{baseDir}images/banner_principal.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+
+                .banner-principal_div {
+                    max-width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    .banner-principal__content {
+                        font-family: "chakraPetch";
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+
+                        img {
+                            position: absolute;
+                            left: -81px;
+                            width: 559px;
+                            height: 51px;
+                        }
+
+                        h1 {
+                            font-size: 62px;
+                            font-weight: 600;
+                            height: 51px;
+                        }
+                        span {
+                            font-size: 32px;
+                            font-weight: 300;
+                            height: 42px;
+                            margin-bottom: 24px;
+                        }
+                    }
+
+                    p {
+                        width: 327px;
+                        font-weight: 300;
+                        font-size: 20px;
+                    }
+
+                    .banner-principal__infos {
+                        display: flex;
+                        align-items: center;
+
+                        div {
+                            width: 82px;
+
+                            &:nth-child(1) {
+                                border-right: 2px solid white;
+                                padding-right: 20px;
+                                font-size: 20px;
+                                font-family: "Montserrat";
+                                font-weight: bold;
+                                width: 93px;
+                                text-align: center;
+
+                                .minor-text {
+                                    font-family: "Montserrat";
+                                    font-weight: 300;
+                                    font-size: 14px;
+                                    color: #ffffff;
+                                }
+                            }
+                            &:nth-child(2) {
+                                border-right: 2px solid white;
+                                padding-left: 20px;
+                                padding-right: 20px;
+
+                                font-size: 20px;
+                                strong {
+                                    font-family: "Montserrat";
+                                    font-weight: bold;
+                                }
+                                text-align: center;
+
+                                .minor-text {
+                                    font-size: 14px;
+                                    font-family: "Montserrat";
+                                    font-weight: 300;
+                                }
+                            }
+                            &:last-child {
+                                padding-left: 20px;
+                                font-size: 20px;
+                                text-align: center;
+                                strong {
+                                    font-family: "Montserrat";
+                                    font-weight: bold;
+                                }
+
+                                .minor-text {
+                                    font-size: 14px;
+                                    font-family: "Montserrat";
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                    }
+
+                    button {
+                        width: 182px;
+                        height: 39px;
+                        border-radius: 90px;
+                        border: 2px solid @white;
+                        background: @black;
+                        color: @white;
+                        font-family: "Montserrat";
+                        font-weight: 400;
+                        font-size: 16px;
+                        margin-top: 31px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// GRID
 
 .container {
     display: grid;
@@ -20,25 +151,330 @@ body {
     .car-text {
         grid-area: "card-text";
         margin-top: 35px;
+        font-family: "chakraPetch";
+        font-weight: 600;
+
+        div {
+            margin-left: 25%;
+            h2 {
+                font-size: 40px;
+            }
+        }
+
+        button {
+            background: @black;
+            color: @white;
+            width: 156px;
+            height: 40px;
+            border-radius: 90px;
+            border: 2px solid #ffffff;
+            font-family: "Montserrat";
+            font-weight: 400;
+            margin-left: 25%;
+        }
     }
 
     .cards {
         img {
             width: 100%;
         }
-        // margin: 0 15px 59px 15px;
-        margin: 60px 0;
+        margin: 0 0 60px 0;
     }
     .card1 {
         grid-area: "card1";
+        position: relative;
         // width: 600px;
+        div {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 61px;
+            p {
+                width: 287px;
+                height: 104px;
+                font-size: 40px;
+                font-family: "chakraPetch";
+                font-weight: 600;
+            }
+
+            button {
+                background: none;
+                color: @white;
+                width: 162px;
+                height: 40px;
+                border-radius: 90px;
+                border: 2px solid @white;
+                margin-top: 19px;
+                font-family: "Montserrat";
+                font-weight: 400;
+            }
+        }
     }
     .card2 {
         grid-area: "card2";
+        position: relative;
         // width: 600px;
         // margin-left: 40px;
+
+        div {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 61px;
+            p {
+                width: 137px;
+                height: 104px;
+                font-size: 40px;
+                font-family: "chakraPetch";
+                font-weight: 600;
+                text-align: right;
+            }
+
+            button {
+                background: none;
+                color: @white;
+                width: 162px;
+                height: 40px;
+                border-radius: 90px;
+                border: 2px solid @white;
+                margin-top: 19px;
+                font-family: "Montserrat";
+                font-weight: 400;
+            }
+        }
+    }
+}
+.details-banner {
+    grid-area: details-banner;
+    position: relative;
+
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        transform: translateY(-50%);
+        p {
+            width: 318px;
+            height: 208px;
+            font-size: 40px;
+            font-family: "chakraPetch";
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-top: 50px;
+        }
+
+        button {
+            background: none;
+            color: @white;
+            width: 162px;
+            height: 40px;
+            border-radius: 90px;
+            border: 2px solid @white;
+            margin: 19px 0 49px 0;
+            font-family: "Montserrat";
+            font-weight: 400;
+        }
+    }
+}
+
+// GRID MEDIA QUERIES
+
+@media screen and (max-width: 1216px) {
+    .container {
+        .card1 {
+            div {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .details-banner {
+        div {
+            p {
+                font-size: 30px;
+                height: 160px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        .card1 {
+            div {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                text-align: center;
+
+                p {
+                    font-size: 30px;
+                }
+            }
+        }
+        .card2 {
+            div {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+                p {
+                    font-size: 30px;
+                }
+            }
+        }
+        .car-text {
+            max-width: 100%;
+
+            div {
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .details-banner {
+        div {
+            p {
+                font-size: 27px;
+                height: 95px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .car-text {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            div {
+                margin: 0;
+                h2 {
+                    font-size: 40px;
+                    text-align: center;
+                }
+            }
+            button {
+                margin: 0 auto 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .details-banner {
+        div {
+            p {
+                font-size: 20px;
+                height: 64px;
+            }
+            button {
+                font-size: 1.2rem;
+                width: 124px;
+                height: 33px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .details-banner {
+        div {
+            p {
+                font-size: 18px;
+                height: 27px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 448px) {
+    .container {
+        .car-text {
+            div {
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+        .card1 {
+            div {
+                p {
+                    font-size: 25px;
+                }
+            }
+        }
+        .card2 {
+            div {
+                text-align: center;
+                p {
+                    font-size: 25px;
+                }
+            }
+        }
     }
     .details-banner {
-        grid-area: details-banner;
+        div {
+            left: 10px;
+            p {
+                font-size: 14px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 397px) {
+    .container {
+        .card1 {
+            div {
+                p {
+                    width: 191px;
+                    font-size: 25px;
+                }
+            }
+        }
+        .card2 {
+            div {
+                text-align: center;
+                p {
+                    width: 191px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .details-banner {
+        div {
+            left: 10px;
+            p {
+                font-size: 12px;
+                height: 20px;
+            }
+
+            button {
+                font-size: 1rem;
+                width: 108px;
+                height: 30px;
+            }
+        }
     }
 }
