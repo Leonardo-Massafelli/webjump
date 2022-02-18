@@ -290,7 +290,6 @@ return [
         'Carbono_CalculatorShipping' => 1,
         'Dotdigitalgroup_Email' => 1,
         'Dotdigitalgroup_Chat' => 1,
-        'Ho_Templatehints' => 1,
         'Klarna_Core' => 1,
         'Klarna_Ordermanagement' => 1,
         'Klarna_Onsitemessaging' => 1,
