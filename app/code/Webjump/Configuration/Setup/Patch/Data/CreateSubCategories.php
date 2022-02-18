@@ -80,7 +80,7 @@ class CreateSubCategories implements DataPatchInterface
         //
         $categoryId = $this->getCategoryId('Decoração');
 
-        $subcategorias = ['Topper', 'Painéis', 'Decorações Completas'];
+        $subcategorias = ['Topper', 'Painéis'];
 
         $this->createCategories($categoryId, $subcategorias);
 
@@ -88,28 +88,28 @@ class CreateSubCategories implements DataPatchInterface
         //creating subcategories for automotivo categories
         $categoryId = $this->getCategoryId('Volt 3');
 
-        $subcategorias = ['Volt 3 2.0 Flex', 'Volt 3 Hybrid 1.8'];
+        $subcategorias = ['Volt 3', 'Volt 3 Plaid'];
 
         $this->createCategories($categoryId, $subcategorias);
 
         //
         $categoryId = $this->getCategoryId('Volt SX');
 
-        $subcategorias = ['Volt SX 2.0 Flex', 'Volt SX Hybrid 1.8'];
+        $subcategorias = ['Volt SX', 'Volt SX Plaid'];
 
         $this->createCategories($categoryId, $subcategorias);
 
         //
         $categoryId = $this->getCategoryId('Roadmaster');
 
-        $subcategorias = ['Roadmaster 2.0 Si4 Hybrid', 'Roadmaster Dynamic Black 3.0'];
+        $subcategorias = ['Roadmaster', 'Roadmaster Plaid'];
 
         $this->createCategories($categoryId, $subcategorias);
 
         //
         $categoryId = $this->getCategoryId('Acessories');
 
-        $subcategorias = ['Car Cover', 'Air freshener'];
+        $subcategorias = ['Charging', 'Vehicle Acessories'];
 
         $this->createCategories($categoryId, $subcategorias);
     }
