@@ -19,7 +19,7 @@ use Magento\Store\Model\WebsiteRepository;
 use Webjump\Configuration\Setup\Patch\Data\CreateWebsites;
 use \Magento\Config\Model\ResourceModel\Config;
 
-class CmsHomeFesta implements DataPatchInterface
+class CmsHomeParty implements DataPatchInterface
 {
     CONST IDENTIFIER_NAME = 'home-party';
 
