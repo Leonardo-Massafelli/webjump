@@ -70,7 +70,7 @@ class CmsHomeParty implements DataPatchInterface
             'page_layout' => '1column', // cms page layout
             'meta_keywords' => '', // cms page meta keywords
             'meta_description' => '', // cms page meta description
-            'identifier' => 'home-party', // cms page identifier
+            'identifier' => self::IDENTIFIER_NAME, // cms page identifier
             'content_heading' => '', // cms page content heading
             'content' => '<div class="banner"><a href="{{config path="web/unsecure/base_url"}}catalog/category/view/s/halloween/id/15/"><img src="{{media url="wysiwyg/main-banner.png"}}" alt=""></a></div>
             <div class="flex-cards">
