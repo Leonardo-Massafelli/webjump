@@ -52,6 +52,10 @@ atlassian*
 /pub/media/theme/*
 /pub/media/theme_customization/*
 !/pub/media/theme_customization/.htaccess
+<<<<<<< HEAD
+=======
+
+>>>>>>> 36fdd4a6d22ebabf75096056b5dc83b02c0a909d
 !/pub/media/wysiwyg/.htaccess
 /pub/media/tmp/*
 !/pub/media/tmp/.htaccess
