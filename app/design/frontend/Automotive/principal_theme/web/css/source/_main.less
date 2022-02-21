@@ -1,44 +1,1093 @@
-body {
-    background: #000000;
+body.cms-index-index {
+    background: @black;
     color: @white;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "car car-text"
-        "card1 card2"
-        "details-banner details-banner";
-    grid-gap: 0 15px;
+// BANNER
 
-    .car {
-        grid-area: "card";
-        margin-top: 35px;
+.page-wrapper {
+    .page-main {
+        .column.main {
+            .banner-principal {
+                text-align: center;
+                a {
+                    img {
+                        object-fit: cover;
+                    }
+                }
+                margin-bottom: 35px;
+            }
+        }
     }
-    .car-text {
+}
+
+.cms-index-index {
+    .page-wrapper {
+        .page-main {
+            max-width: 100%;
+        }
+    }
+}
+
+// New GRID
+.container {
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1240px;
+        margin: 0 auto 60px;
+    }
+    .car-text-col {
         grid-area: "card-text";
         margin-top: 35px;
-    }
+        font-family: "chakraPetch";
+        font-weight: 600;
 
-    .cards {
-        img {
-            width: 100%;
+        button {
+            background: @black;
+            color: @white;
+            width: 156px;
+            height: 40px;
+            border-radius: 90px;
+            border: 2px solid #ffffff;
+            font-family: "Montserrat";
+            font-weight: 400;
         }
-        // margin: 0 15px 59px 15px;
-        margin: 60px 0;
     }
-    .card1 {
-        grid-area: "card1";
+    .card1-col {
+        position: relative;
+        margin-right: 40px;
         // width: 600px;
+        div {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            p {
+                width: 287px;
+                height: 104px;
+                font-size: 40px;
+                font-family: "chakraPetch";
+                font-weight: 600;
+            }
+
+            button {
+                background: none;
+                color: @white;
+                width: 162px;
+                height: 40px;
+                border-radius: 90px;
+                border: 2px solid @white;
+                margin-top: 19px;
+                font-family: "Montserrat";
+                font-weight: 400;
+            }
+        }
     }
-    .card2 {
-        grid-area: "card2";
+    .card2-col {
+        position: relative;
         // width: 600px;
         // margin-left: 40px;
+
+        div {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 61px;
+            p {
+                width: 137px;
+                height: 104px;
+                font-size: 40px;
+                font-family: "chakraPetch";
+                font-weight: 600;
+                text-align: right;
+            }
+
+            button {
+                background: none;
+                color: @white;
+                width: 162px;
+                height: 40px;
+                border-radius: 90px;
+                border: 2px solid @white;
+                margin-top: 19px;
+                font-family: "Montserrat";
+                font-weight: 400;
+            }
+        }
+    }
+}
+.details-banner {
+    grid-area: details-banner;
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        transform: translateY(-50%);
+        p {
+            width: 318px;
+            height: 208px;
+            font-size: 40px;
+            font-family: "chakraPetch";
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-top: 50px;
+        }
+
+        button {
+            background: none;
+            color: @white;
+            width: 162px;
+            height: 40px;
+            border-radius: 90px;
+            border: 2px solid @white;
+            margin: 19px 0 49px 0;
+            font-family: "Montserrat";
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width: 1104px) {
+    .container {
+        .row {
+            .car-col {
+                max-width: 100%;
+            }
+            .car-text-col {
+                div {
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .card1-col {
+                max-width: 600px;
+                margin-right: 20px;
+
+                p {
+                    width: 220px;
+                    font-size: 30px;
+                }
+            }
+            .card2-col {
+                max-width: 600px;
+                div {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 61px;
+                    p {
+                        width: 137px;
+                        height: 104px;
+                        font-size: 30px;
+                        font-family: "chakraPetch";
+                        font-weight: 600;
+                        text-align: center;
+                    }
+
+                    button {
+                        background: none;
+                        color: @white;
+                        width: 162px;
+                        height: 40px;
+                        border-radius: 90px;
+                        border: 2px solid @white;
+                        margin-top: 19px;
+                        font-family: "Montserrat";
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
     }
     .details-banner {
         grid-area: details-banner;
+        position: relative;
+        max-width: 1240px;
+        margin: 0 auto;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            p {
+                width: 318px;
+                height: 155px;
+                font-size: 30px;
+                font-family: "chakraPetch";
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin-top: 50px;
+            }
+
+            button {
+                background: none;
+                color: @white;
+                width: 162px;
+                height: 40px;
+                border-radius: 90px;
+                border: 2px solid @white;
+                margin: 19px 0 49px 0;
+                font-family: "Montserrat";
+                font-weight: 400;
+            }
+        }
     }
 }
+
+@media screen and (max-width: 800px) {
+    .container {
+        .row {
+            .car-col {
+                max-width: 100%;
+            }
+            .car-text-col {
+                div {
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .card1-col {
+                max-width: 600px;
+                margin-right: 20px;
+
+                div {
+                    right: -31px;
+                    p {
+                        width: 220px;
+                        font-size: 25px;
+                    }
+                }
+            }
+            .card2-col {
+                max-width: 600px;
+                div {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 61px;
+                    p {
+                        width: 137px;
+                        height: 104px;
+                        font-size: 25px;
+                        font-family: "chakraPetch";
+                        font-weight: 600;
+                        text-align: center;
+                    }
+
+                    button {
+                        background: none;
+                        color: @white;
+                        width: 162px;
+                        height: 40px;
+                        border-radius: 90px;
+                        border: 2px solid @white;
+                        margin-top: 19px;
+                        font-family: "Montserrat";
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    .details-banner {
+        grid-area: details-banner;
+        position: relative;
+        max-width: 1240px;
+        margin: 0 auto;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            p {
+                width: 318px;
+                height: 88px;
+                font-size: 25px;
+                font-family: "chakraPetch";
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin-top: 50px;
+            }
+
+            button {
+                background: none;
+                color: @white;
+                width: 162px;
+                height: 40px;
+                border-radius: 90px;
+                border: 2px solid @white;
+                margin: 19px 0 49px 0;
+                font-family: "Montserrat";
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        .row {
+            flex-direction: column;
+            align-items: center;
+            .car-col {
+                max-width: 100%;
+            }
+            .car-text-col {
+                div {
+                    h2 {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            .card1-col {
+                max-width: 400px;
+                margin: 0 0 20px 0;
+
+                div {
+                    right: 0px;
+                    p {
+                        width: 220px;
+                        font-size: 25px;
+                    }
+                }
+            }
+            .card2-col {
+                max-width: 400px;
+                div {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 61px;
+                    p {
+                        width: 137px;
+                        height: 104px;
+                        font-size: 25px;
+                        font-family: "chakraPetch";
+                        font-weight: 600;
+                        text-align: center;
+                    }
+
+                    button {
+                        background: none;
+                        color: @white;
+                        width: 162px;
+                        height: 40px;
+                        border-radius: 90px;
+                        border: 2px solid @white;
+                        margin-top: 19px;
+                        font-family: "Montserrat";
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    .details-banner {
+        grid-area: details-banner;
+        position: relative;
+        max-width: 1240px;
+        margin: 0 auto;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            p {
+                width: 318px;
+                height: 88px;
+                font-size: 25px;
+                font-family: "chakraPetch";
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin-top: 50px;
+            }
+
+            button {
+                background: none;
+                color: @white;
+                width: 162px;
+                height: 40px;
+                border-radius: 90px;
+                border: 2px solid @white;
+                margin: 19px 0 49px 0;
+                font-family: "Montserrat";
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .details-banner {
+        grid-area: details-banner;
+        position: relative;
+        max-width: 1240px;
+        margin: 0 auto;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            p {
+                width: 318px;
+                height: 38px;
+                font-size: 18px;
+                font-family: "chakraPetch";
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin-top: 50px;
+            }
+
+            button {
+                background: none;
+                color: @white;
+                width: 162px;
+                height: 40px;
+                border-radius: 90px;
+                border: 2px solid @white;
+                margin: 19px 0 49px 0;
+                font-family: "Montserrat";
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .container {
+        .row {
+            .card1-col {
+                max-width: 400px;
+                margin: 0 0 20px 0;
+
+                div {
+                    right: 0;
+                    p {
+                        width: 220px;
+                        font-size: 25px;
+                    }
+
+                    button {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .card2-col {
+                max-width: 400px;
+                div {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 50px;
+                    p {
+                        width: 137px;
+                        height: 100px;
+                        font-size: 25px;
+                        font-family: "chakraPetch";
+                        font-weight: 600;
+                        text-align: center;
+                    }
+
+                    button {
+                        background: none;
+                        color: @white;
+                        width: 162px;
+                        height: 40px;
+                        border-radius: 90px;
+                        border: 2px solid @white;
+                        margin-top: 0;
+                        font-family: "Montserrat";
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    .details-banner {
+        grid-area: details-banner;
+        position: relative;
+        max-width: 1240px;
+        margin: 0 auto;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            p {
+                width: 302px;
+                height: 26px;
+                font-size: 18px;
+                font-family: "chakraPetch";
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin-top: 50px;
+            }
+
+            button {
+                background: none;
+                color: @white;
+                width: 162px;
+                height: 29px;
+                border-radius: 90px;
+                border: 2px solid @white;
+                margin: 19px 0 49px 0;
+                font-family: "Montserrat";
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .container {
+        .row {
+            .card1-col {
+                max-width: 400px;
+                margin: 0 0 20px 0;
+
+                div {
+                    right: 20px;
+                    p {
+                        width: 140px;
+                        font-size: 25px;
+                    }
+
+                    button {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .card2-col {
+                max-width: 400px;
+                div {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 50px;
+                    p {
+                        width: 137px;
+                        height: 100px;
+                        font-size: 25px;
+                        font-family: "chakraPetch";
+                        font-weight: 600;
+                        text-align: center;
+                    }
+
+                    button {
+                        background: none;
+                        color: @white;
+                        width: 162px;
+                        height: 40px;
+                        border-radius: 90px;
+                        border: 2px solid @white;
+                        margin-top: 0;
+                        font-family: "Montserrat";
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    .details-banner {
+        grid-area: details-banner;
+        position: relative;
+        max-width: 1240px;
+        margin: 0 auto;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            p {
+                width: 265px;
+                height: 26px;
+                font-size: 16px;
+                font-family: "chakraPetch";
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin-top: 50px;
+            }
+
+            button {
+                background: none;
+                color: @white;
+                width: 120px;
+                height: 29px;
+                border-radius: 90px;
+                border: 2px solid @white;
+                margin: 19px 0 49px 0;
+                font-family: "Montserrat";
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+// @media screen and (max-width: 1280px) {
+//     .page-wrapper {
+//         .page-main {
+//             .column.main {
+//                 .banner-principal {
+//                     height: 500px;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width: 1147px) {
+//     .page-wrapper {
+//         .page-main {
+//             .column.main {
+//                 .banner-principal {
+//                     height: 465px;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width: 1078px) {
+//     .page-wrapper {
+//         .page-main {
+//             .column.main {
+//                 .banner-principal {
+//                     height: 430px;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width: 1000px) {
+//     .page-wrapper {
+//         .page-main {
+//             .column.main {
+//                 .banner-principal {
+//                     height: 395px;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width: 915px) {
+//     .page-wrapper {
+//         .page-main {
+//             .column.main {
+//                 .banner-principal {
+//                     height: 365px;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width: 847px) {
+//     .page-wrapper {
+//         .page-main {
+//             .column.main {
+//                 .banner-principal {
+//                     height: 340px;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width: 794px) {
+//     .page-wrapper {
+//         .page-main {
+//             .column.main {
+//                 .banner-principal {
+//                     height: 310px;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width: 767px) {
+//     .page-wrapper {
+//         .page-main {
+//             .column.main {
+//                 .banner-principal {
+//                     height: 310px;
+//                 }
+//             }
+//         }
+//     }
+
+//     .container {
+//         .row {
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             max-width: 1240px;
+//             margin: 0 auto 60px;
+//         }
+//         .card1-col {
+//             margin: 0;
+//         }
+//     }
+// }
+// GRID
+
+// .container {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 1fr 1fr;
+//     grid-template-areas:
+//         "car car-text"
+//         "card1 card2"
+//         "details-banner details-banner";
+//     grid-gap: 0 15px;
+
+//     .car {
+//         grid-area: "card";
+//         margin-top: 35px;
+//     }
+//     .car-text {
+//         grid-area: "card-text";
+//         margin-top: 35px;
+//         font-family: "chakraPetch";
+//         font-weight: 600;
+
+//         div {
+//             margin-left: 25%;
+//             h2 {
+//                 font-size: 40px;
+//             }
+//         }
+
+//         button {
+//             background: @black;
+//             color: @white;
+//             width: 156px;
+//             height: 40px;
+//             border-radius: 90px;
+//             border: 2px solid #ffffff;
+//             font-family: "Montserrat";
+//             font-weight: 400;
+//             margin-left: 25%;
+//         }
+//     }
+
+//     .cards {
+//         img {
+//             width: 100%;
+//         }
+//         margin: 0 0 60px 0;
+//     }
+//     .card1 {
+//         grid-area: "card1";
+//         position: relative;
+//         // width: 600px;
+//         div {
+//             position: absolute;
+//             top: 50%;
+//             transform: translateY(-50%);
+//             right: 61px;
+//             p {
+//                 width: 287px;
+//                 height: 104px;
+//                 font-size: 40px;
+//                 font-family: "chakraPetch";
+//                 font-weight: 600;
+//             }
+
+//             button {
+//                 background: none;
+//                 color: @white;
+//                 width: 162px;
+//                 height: 40px;
+//                 border-radius: 90px;
+//                 border: 2px solid @white;
+//                 margin-top: 19px;
+//                 font-family: "Montserrat";
+//                 font-weight: 400;
+//             }
+//         }
+//     }
+//     .card2 {
+//         grid-area: "card2";
+//         position: relative;
+//         // width: 600px;
+//         // margin-left: 40px;
+
+//         div {
+//             position: absolute;
+//             top: 50%;
+//             transform: translateY(-50%);
+//             right: 61px;
+//             p {
+//                 width: 137px;
+//                 height: 104px;
+//                 font-size: 40px;
+//                 font-family: "chakraPetch";
+//                 font-weight: 600;
+//                 text-align: right;
+//             }
+
+//             button {
+//                 background: none;
+//                 color: @white;
+//                 width: 162px;
+//                 height: 40px;
+//                 border-radius: 90px;
+//                 border: 2px solid @white;
+//                 margin-top: 19px;
+//                 font-family: "Montserrat";
+//                 font-weight: 400;
+//             }
+//         }
+//     }
+// }
+// .details-banner {
+//     grid-area: details-banner;
+//     position: relative;
+
+//     div {
+//         position: absolute;
+//         top: 50%;
+//         left: 50px;
+//         transform: translateY(-50%);
+//         p {
+//             width: 318px;
+//             height: 208px;
+//             font-size: 40px;
+//             font-family: "chakraPetch";
+//             font-weight: 600;
+//             letter-spacing: 2px;
+//             margin-top: 50px;
+//         }
+
+//         button {
+//             background: none;
+//             color: @white;
+//             width: 162px;
+//             height: 40px;
+//             border-radius: 90px;
+//             border: 2px solid @white;
+//             margin: 19px 0 49px 0;
+//             font-family: "Montserrat";
+//             font-weight: 400;
+//         }
+//     }
+// }
+
+// GRID MEDIA QUERIES
+
+// @media screen and (max-width: 1216px) {
+//     .container {
+//         .card1 {
+//             div {
+//                 position: absolute;
+//                 top: 50%;
+//                 transform: translateY(-50%);
+//                 right: 10px;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 1080px) {
+//     .details-banner {
+//         div {
+//             p {
+//                 font-size: 30px;
+//                 height: 160px;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 1000px) {
+//     .container {
+//         .card1 {
+//             div {
+//                 position: absolute;
+//                 top: 50%;
+//                 transform: translateY(-50%);
+//                 right: 0;
+//                 text-align: center;
+
+//                 p {
+//                     font-size: 30px;
+//                 }
+//             }
+//         }
+//         .card2 {
+//             div {
+//                 position: absolute;
+//                 top: 50%;
+//                 transform: translateY(-50%);
+
+//                 p {
+//                     font-size: 30px;
+//                 }
+//             }
+//         }
+//         .car-text {
+//             max-width: 100%;
+
+//             div {
+//                 h2 {
+//                     font-size: 30px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 900px) {
+//     .details-banner {
+//         div {
+//             p {
+//                 font-size: 27px;
+//                 height: 95px;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 815px) {
+//     .container {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+
+//         .car-text {
+//             max-width: 100%;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+
+//             div {
+//                 margin: 0;
+//                 h2 {
+//                     font-size: 40px;
+//                     text-align: center;
+//                 }
+//             }
+//             button {
+//                 margin: 0 auto 50px;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 660px) {
+//     .details-banner {
+//         div {
+//             p {
+//                 font-size: 20px;
+//                 height: 64px;
+//             }
+//             button {
+//                 font-size: 1.2rem;
+//                 width: 124px;
+//                 height: 33px;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 510px) {
+//     .details-banner {
+//         div {
+//             p {
+//                 font-size: 18px;
+//                 height: 27px;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 448px) {
+//     .container {
+//         .car-text {
+//             div {
+//                 h2 {
+//                     font-size: 30px;
+//                 }
+//             }
+//         }
+//         .card1 {
+//             div {
+//                 p {
+//                     font-size: 25px;
+//                 }
+//             }
+//         }
+//         .card2 {
+//             div {
+//                 text-align: center;
+//                 p {
+//                     font-size: 25px;
+//                 }
+//             }
+//         }
+//     }
+//     .details-banner {
+//         div {
+//             left: 10px;
+//             p {
+//                 font-size: 14px;
+//                 height: 20px;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 397px) {
+//     .container {
+//         .card1 {
+//             div {
+//                 p {
+//                     width: 191px;
+//                     font-size: 25px;
+//                 }
+//             }
+//         }
+//         .card2 {
+//             div {
+//                 text-align: center;
+//                 p {
+//                     width: 191px;
+//                     font-size: 25px;
+//                 }
+//             }
+//         }
+//     }
+//     .details-banner {
+//         div {
+//             left: 10px;
+//             p {
+//                 font-size: 12px;
+//                 height: 20px;
+//             }
+
+//             button {
+//                 font-size: 1rem;
+//                 width: 108px;
+//                 height: 30px;
+//             }
+//         }
+//     }
+// }
