@@ -8,6 +8,14 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     
     <referenceBlock name="page.main.title" remove="true"/>
-    <referenceBlock name="cms_page" remove="true"/>
-    <referenceContainer name="main" remove="true"/>
+    <referenceContainer name="main">
+        <block class="Magento\Cms\Block\Block" as='automotive_grid' after='cms_page'>
+            <arguments>
+                <argument name='block_id' xsi:type='string'>automotive_grid</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+
+    
+
 </page>
