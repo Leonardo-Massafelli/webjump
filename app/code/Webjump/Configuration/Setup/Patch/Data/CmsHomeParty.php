@@ -74,11 +74,11 @@ class CmsHomeParty implements DataPatchInterface
             'content_heading' => '', // cms page content heading
             'content' => '<div class="banner"><a href="{{config path="web/unsecure/base_url"}}catalog/category/view/s/halloween/id/15/"><img src="{{media url="wysiwyg/main-banner.png"}}" alt=""></a></div>
             <div class="flex-cards">
-            <div class="festaJunina"><a href="{{config path="web/unsecure/base_url"}}catalog/category/view/s/bexigas-customizadas/id/23/"> <img src="{{media url="wysiwyg/festa_junina.png"}}" alt=""> </a></div>
-            <div class="carnaval"><a href="{{config path="web/unsecure/base_url"}}catalog/category/view/s/festa-a-fantasia/id/18/"> <img src="{{media url="wysiwyg/carnaval.png"}}" alt=""> </a></div>
-            <div class="aniversario"><a href="{{config path="web/unsecure/base_url"}}catalog/category/view/s/topper/id/24/"> <img src="{{media url="wysiwyg/aniversario.png"}}" alt=""> </a></div>
+            <div class="festaJunina"><a href="{{config path="web/unsecure/base_url"}}catalog/category/view/s/festa-junina/id/35/"> <img src="{{media url="wysiwyg/festa_junina.png"}}" alt=""> </a></div>
+            <div class="carnaval"><a href="{{config path="web/unsecure/base_url"}}catalog/category/view/s/carnaval/id/36/"> <img src="{{media url="wysiwyg/carnaval.png"}}" alt=""> </a></div>
+            <div class="aniversario"><a id="" href="{{config path="web/unsecure/base_url"}}catalog/category/view/s/aniversario/id/37/"> <img src="{{media url="wysiwyg/aniversario.png"}}" alt=""> </a></div>
             </div>
-            <div class="promo-card"><a href="{{config path="web/unsecure/base_url"}}catalog/category/view/s/pool-party/id/17/"><img src="{{media url="wysiwyg/promotions.png"}}" alt=""></a></div>', // cms page content
+            <div class="promo-card"><img src="{{media url="wysiwyg/promotions.png"}}" alt=""></div>', // cms page content
             'layout_update_xml' => '', // cms page layout xml
             'url_key' => self::IDENTIFIER_NAME, // cms page url key
             'is_active' => 1, // status enabled or disabled
