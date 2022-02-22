@@ -38,7 +38,12 @@ class AddMissingSubCategories implements DataPatchInterface
 
     public static function getDependencies()
     {
-        return[CreateRootCategories::class];
+        return [
+            CreateCategories:: class,
+            CreateWebsites::class,
+            CreateRootCategories::class,
+            CreateSubCategories::class
+        ];
     }
 
     public function getAliases()
