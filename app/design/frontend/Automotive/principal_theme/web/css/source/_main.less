@@ -30,272 +30,313 @@ body.cms-index-index {
 }
 
 // New GRID
-.container {
-    .row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 1240px;
-        margin: 0 auto 60px;
-    }
-    .car-text-col {
-        grid-area: "card-text";
-        margin-top: 35px;
-        font-family: "chakraPetch";
-        font-weight: 600;
+.page-wrapper {
+    .page-main {
+        .columns {
+            .column.main {
+                .container {
+                    .row {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        max-width: 1240px;
+                        margin: 0 auto 60px;
+                    }
+                    .car-text-col {
+                        grid-area: "card-text";
+                        margin-top: 35px;
+                        font-family: "chakraPetch";
+                        font-weight: 600;
+                        margin-right: 14%;
+                        color: @white;
 
-        button {
-            background: @black;
-            color: @white;
-            width: 156px;
-            height: 40px;
-            border-radius: 90px;
-            border: 2px solid #ffffff;
-            font-family: "Montserrat";
-            font-weight: 400;
-        }
-    }
-    .card1-col {
-        position: relative;
-        margin-right: 20px;
-        // width: 600px;
-        div {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
+                        div {
+                            width: 317px;
+                            margin-bottom: 27px;
 
-            p {
-                width: 287px;
-                height: 104px;
-                font-size: 40px;
-                font-family: "chakraPetch";
-                font-weight: 600;
+                            h2 {
+                                margin: 0 0 5px 0;
+                                font-weight: 600;
+                                font-size: 40px;
+                            }
+                        }
+
+                        button {
+                            background: @black;
+                            color: @white;
+                            width: 156px;
+                            height: 40px;
+                            border-radius: 90px;
+                            border: 2px solid #ffffff;
+                            font-family: "Montserrat";
+                            font-weight: 400;
+                        }
+                    }
+                    .card1-col {
+                        position: relative;
+                        margin-right: 20px;
+                        // width: 600px;
+                        div {
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            transform: translateY(-50%);
+                            color: @white;
+
+                            p {
+                                width: 287px;
+                                height: 104px;
+                                font-size: 40px;
+                                font-family: "chakraPetch";
+                                font-weight: 600;
+                            }
+
+                            button {
+                                background: none;
+                                color: @white;
+                                width: 162px;
+                                height: 40px;
+                                border-radius: 90px;
+                                border: 2px solid @white;
+                                margin-top: 19px;
+                                font-family: "Montserrat";
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                    .card2-col {
+                        position: relative;
+                        // width: 600px;
+                        // margin-left: 40px;
+
+                        div {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 61px;
+                            color: @white;
+                            p {
+                                width: 137px;
+                                height: 104px;
+                                font-size: 40px;
+                                font-family: "chakraPetch";
+                                font-weight: 600;
+                                text-align: right;
+                                color: @white;
+                            }
+
+                            button {
+                                background: none;
+                                color: @white;
+                                width: 162px;
+                                height: 40px;
+                                border-radius: 90px;
+                                border: 2px solid @white;
+                                margin-top: 19px;
+                                font-family: "Montserrat";
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .details-banner {
+                    grid-area: details-banner;
+                    position: relative;
+                    max-width: 1240px;
+                    margin: 0 auto;
+
+                    div {
+                        position: absolute;
+                        top: 50%;
+                        left: 50px;
+                        transform: translateY(-50%);
+                        p {
+                            width: 318px;
+                            height: 208px;
+                            font-size: 40px;
+                            font-family: "chakraPetch";
+                            font-weight: 600;
+                            letter-spacing: 2px;
+                            margin-top: 50px;
+                            color: @white;
+                        }
+
+                        button {
+                            background: none;
+                            color: @white;
+                            width: 162px;
+                            height: 40px;
+                            border-radius: 90px;
+                            border: 2px solid @white;
+                            margin: 19px 0 49px 0;
+                            font-family: "Montserrat";
+                            font-weight: 400;
+                        }
+                    }
+                }
             }
-
-            button {
-                background: none;
-                color: @white;
-                width: 162px;
-                height: 40px;
-                border-radius: 90px;
-                border: 2px solid @white;
-                margin-top: 19px;
-                font-family: "Montserrat";
-                font-weight: 400;
-            }
-        }
-    }
-    .card2-col {
-        position: relative;
-        // width: 600px;
-        // margin-left: 40px;
-
-        div {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 61px;
-            p {
-                width: 137px;
-                height: 104px;
-                font-size: 40px;
-                font-family: "chakraPetch";
-                font-weight: 600;
-                text-align: right;
-            }
-
-            button {
-                background: none;
-                color: @white;
-                width: 162px;
-                height: 40px;
-                border-radius: 90px;
-                border: 2px solid @white;
-                margin-top: 19px;
-                font-family: "Montserrat";
-                font-weight: 400;
-            }
-        }
-    }
-}
-.details-banner {
-    grid-area: details-banner;
-    position: relative;
-    max-width: 1240px;
-    margin: 0 auto;
-
-    div {
-        position: absolute;
-        top: 50%;
-        left: 50px;
-        transform: translateY(-50%);
-        p {
-            width: 318px;
-            height: 208px;
-            font-size: 40px;
-            font-family: "chakraPetch";
-            font-weight: 600;
-            letter-spacing: 2px;
-            margin-top: 50px;
-        }
-
-        button {
-            background: none;
-            color: @white;
-            width: 162px;
-            height: 40px;
-            border-radius: 90px;
-            border: 2px solid @white;
-            margin: 19px 0 49px 0;
-            font-family: "Montserrat";
-            font-weight: 400;
         }
     }
 }
 
 @media screen and (max-width: 1104px) {
-    .container {
-        .row {
-            .car-col {
-                max-width: 100%;
-            }
-            .car-text-col {
-                div {
-                    h2 {
-                        font-size: 20px;
+    .page-wrapper {
+        .page-main {
+            .columns {
+                .column.main {
+                    .container {
+                        .row {
+                            .car-col {
+                                max-width: 100%;
+                            }
+                            .car-text-col {
+                                div {
+                                    h2 {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+
+                            .card1-col {
+                                max-width: 600px;
+                                margin-right: 20px;
+
+                                p {
+                                    width: 220px;
+                                    font-size: 30px;
+                                }
+                            }
+                            .card2-col {
+                                max-width: 600px;
+                                div {
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 61px;
+                                    p {
+                                        width: 137px;
+                                        height: 104px;
+                                        font-size: 30px;
+                                        font-family: "chakraPetch";
+                                        font-weight: 600;
+                                        text-align: center;
+                                    }
+
+                                    button {
+                                        background: none;
+                                        color: @white;
+                                        width: 162px;
+                                        height: 40px;
+                                        border-radius: 90px;
+                                        border: 2px solid @white;
+                                        margin-top: 19px;
+                                        font-family: "Montserrat";
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .details-banner {
+                        grid-area: details-banner;
+                        position: relative;
+                        max-width: 1240px;
+                        margin: 0 auto;
+
+                        div {
+                            position: absolute;
+                            top: 50%;
+                            left: 50px;
+                            transform: translateY(-50%);
+                            p {
+                                width: 415px;
+                                height: 115px;
+                                font-size: 30px;
+                                font-family: "chakraPetch";
+                                font-weight: 600;
+                                letter-spacing: 2px;
+                                margin-top: 50px;
+                            }
+
+                            button {
+                                background: none;
+                                color: @white;
+                                width: 162px;
+                                height: 40px;
+                                border-radius: 90px;
+                                border: 2px solid @white;
+                                margin: 19px 0 49px 0;
+                                font-family: "Montserrat";
+                                font-weight: 400;
+                            }
+                        }
                     }
                 }
-            }
-
-            .card1-col {
-                max-width: 600px;
-                margin-right: 20px;
-
-                p {
-                    width: 220px;
-                    font-size: 30px;
-                }
-            }
-            .card2-col {
-                max-width: 600px;
-                div {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: 61px;
-                    p {
-                        width: 137px;
-                        height: 104px;
-                        font-size: 30px;
-                        font-family: "chakraPetch";
-                        font-weight: 600;
-                        text-align: center;
-                    }
-
-                    button {
-                        background: none;
-                        color: @white;
-                        width: 162px;
-                        height: 40px;
-                        border-radius: 90px;
-                        border: 2px solid @white;
-                        margin-top: 19px;
-                        font-family: "Montserrat";
-                        font-weight: 400;
-                    }
-                }
-            }
-        }
-    }
-    .details-banner {
-        grid-area: details-banner;
-        position: relative;
-        max-width: 1240px;
-        margin: 0 auto;
-
-        div {
-            position: absolute;
-            top: 50%;
-            left: 50px;
-            transform: translateY(-50%);
-            p {
-                width: 318px;
-                height: 155px;
-                font-size: 30px;
-                font-family: "chakraPetch";
-                font-weight: 600;
-                letter-spacing: 2px;
-                margin-top: 50px;
-            }
-
-            button {
-                background: none;
-                color: @white;
-                width: 162px;
-                height: 40px;
-                border-radius: 90px;
-                border: 2px solid @white;
-                margin: 19px 0 49px 0;
-                font-family: "Montserrat";
-                font-weight: 400;
             }
         }
     }
 }
 
 @media screen and (max-width: 800px) {
-    .container {
-        .row {
-            .car-col {
-                max-width: 100%;
-            }
-            .car-text-col {
-                div {
-                    h2 {
-                        font-size: 20px;
-                    }
-                }
-            }
+    .page-wrapper {
+        .page-main {
+            .columns {
+                .column.main {
+                    .container {
+                        .row {
+                            .car-col {
+                                max-width: 100%;
+                            }
+                            .car-text-col {
+                                div {
+                                    h2 {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
 
-            .card1-col {
-                max-width: 600px;
-                margin-right: 20px;
+                            .card1-col {
+                                max-width: 600px;
+                                margin-right: 20px;
 
-                div {
-                    right: -31px;
-                    p {
-                        width: 220px;
-                        font-size: 25px;
-                    }
-                }
-            }
-            .card2-col {
-                max-width: 600px;
-                div {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: 61px;
-                    p {
-                        width: 137px;
-                        height: 104px;
-                        font-size: 25px;
-                        font-family: "chakraPetch";
-                        font-weight: 600;
-                        text-align: center;
-                    }
+                                div {
+                                    right: -31px;
+                                    p {
+                                        width: 220px;
+                                        font-size: 25px;
+                                    }
+                                }
+                            }
+                            .card2-col {
+                                max-width: 600px;
+                                div {
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 61px;
+                                    p {
+                                        width: 137px;
+                                        height: 104px;
+                                        font-size: 25px;
+                                        font-family: "chakraPetch";
+                                        font-weight: 600;
+                                        text-align: center;
+                                    }
 
-                    button {
-                        background: none;
-                        color: @white;
-                        width: 162px;
-                        height: 40px;
-                        border-radius: 90px;
-                        border: 2px solid @white;
-                        margin-top: 19px;
-                        font-family: "Montserrat";
-                        font-weight: 400;
+                                    button {
+                                        background: none;
+                                        color: @white;
+                                        width: 162px;
+                                        height: 40px;
+                                        border-radius: 90px;
+                                        border: 2px solid @white;
+                                        margin-top: 19px;
+                                        font-family: "Montserrat";
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -338,308 +379,344 @@ body.cms-index-index {
 }
 
 @media screen and (max-width: 767px) {
-    .container {
-        .row {
-            flex-direction: column;
-            align-items: center;
-            .car-col {
-                max-width: 100%;
-            }
-            .car-text-col {
-                div {
-                    h2 {
-                        font-size: 30px;
+    .page-wrapper {
+        .page-main {
+            .columns {
+                .column.main {
+                    .container {
+                        .row {
+                            flex-direction: column;
+                            align-items: center;
+                            .car-col {
+                                max-width: 100%;
+                            }
+
+                            .car-text-col {
+                                margin: 35px 0 0 0;
+                                text-align: center;
+                                div {
+                                    h2 {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+
+                            .card1-col {
+                                max-width: 400px;
+                                margin: 0 0 20px 0;
+
+                                div {
+                                    right: 0px;
+                                    p {
+                                        width: 220px;
+                                        font-size: 25px;
+                                    }
+                                }
+                            }
+                            .card2-col {
+                                max-width: 400px;
+                                div {
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 61px;
+                                    p {
+                                        width: 137px;
+                                        height: 104px;
+                                        font-size: 25px;
+                                        font-family: "chakraPetch";
+                                        font-weight: 600;
+                                        text-align: center;
+                                    }
+
+                                    button {
+                                        background: none;
+                                        color: @white;
+                                        width: 162px;
+                                        height: 40px;
+                                        border-radius: 90px;
+                                        border: 2px solid @white;
+                                        margin-top: 19px;
+                                        font-family: "Montserrat";
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .details-banner {
+                        grid-area: details-banner;
+                        position: relative;
+                        max-width: 1240px;
+                        margin: 0 auto;
+
+                        div {
+                            position: absolute;
+                            top: 50%;
+                            left: 50px;
+                            transform: translateY(-50%);
+                            p {
+                                width: 470px;
+                                height: 70px;
+                                font-size: 25px;
+                                font-family: "chakraPetch";
+                                font-weight: 600;
+                                letter-spacing: 2px;
+                                margin-top: 50px;
+                            }
+
+                            button {
+                                background: none;
+                                color: @white;
+                                width: 162px;
+                                height: 40px;
+                                border-radius: 90px;
+                                border: 2px solid @white;
+                                margin: 19px 0 49px 0;
+                                font-family: "Montserrat";
+                                font-weight: 400;
+                            }
+                        }
                     }
                 }
-            }
-
-            .card1-col {
-                max-width: 400px;
-                margin: 0 0 20px 0;
-
-                div {
-                    right: 0px;
-                    p {
-                        width: 220px;
-                        font-size: 25px;
-                    }
-                }
-            }
-            .card2-col {
-                max-width: 400px;
-                div {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: 61px;
-                    p {
-                        width: 137px;
-                        height: 104px;
-                        font-size: 25px;
-                        font-family: "chakraPetch";
-                        font-weight: 600;
-                        text-align: center;
-                    }
-
-                    button {
-                        background: none;
-                        color: @white;
-                        width: 162px;
-                        height: 40px;
-                        border-radius: 90px;
-                        border: 2px solid @white;
-                        margin-top: 19px;
-                        font-family: "Montserrat";
-                        font-weight: 400;
-                    }
-                }
-            }
-        }
-    }
-    .details-banner {
-        grid-area: details-banner;
-        position: relative;
-        max-width: 1240px;
-        margin: 0 auto;
-
-        div {
-            position: absolute;
-            top: 50%;
-            left: 50px;
-            transform: translateY(-50%);
-            p {
-                width: 318px;
-                height: 88px;
-                font-size: 25px;
-                font-family: "chakraPetch";
-                font-weight: 600;
-                letter-spacing: 2px;
-                margin-top: 50px;
-            }
-
-            button {
-                background: none;
-                color: @white;
-                width: 162px;
-                height: 40px;
-                border-radius: 90px;
-                border: 2px solid @white;
-                margin: 19px 0 49px 0;
-                font-family: "Montserrat";
-                font-weight: 400;
             }
         }
     }
 }
 
 @media screen and (max-width: 615px) {
-    .details-banner {
-        grid-area: details-banner;
-        position: relative;
-        max-width: 1240px;
-        margin: 0 auto;
+    .page-wrapper {
+        .page-main {
+            .columns {
+                .column.main {
+                    .details-banner {
+                        grid-area: details-banner;
+                        position: relative;
+                        max-width: 1240px;
+                        margin: 0 auto;
 
-        div {
-            position: absolute;
-            top: 50%;
-            left: 50px;
-            transform: translateY(-50%);
-            p {
-                width: 318px;
-                height: 38px;
-                font-size: 18px;
-                font-family: "chakraPetch";
-                font-weight: 600;
-                letter-spacing: 2px;
-                margin-top: 50px;
-            }
+                        div {
+                            position: absolute;
+                            top: 50%;
+                            left: 50px;
+                            transform: translateY(-50%);
+                            p {
+                                width: 318px;
+                                height: 38px;
+                                font-size: 18px;
+                                font-family: "chakraPetch";
+                                font-weight: 600;
+                                letter-spacing: 2px;
+                                margin-top: 50px;
+                            }
 
-            button {
-                background: none;
-                color: @white;
-                width: 162px;
-                height: 40px;
-                border-radius: 90px;
-                border: 2px solid @white;
-                margin: 19px 0 49px 0;
-                font-family: "Montserrat";
-                font-weight: 400;
+                            button {
+                                background: none;
+                                color: @white;
+                                width: 140px;
+                                height: 32px;
+                                border-radius: 90px;
+                                border: 2px solid @white;
+                                margin: 19px 0 49px 0;
+                                font-family: "Montserrat";
+                                font-weight: 400;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 
 @media screen and (max-width: 460px) {
-    .container {
-        .row {
-            .card1-col {
-                max-width: 400px;
-                margin: 0 0 20px 0;
+    .page-wrapper {
+        .page-main {
+            .columns {
+                .column.main {
+                    .container {
+                        .row {
+                            .card1-col {
+                                max-width: 400px;
+                                margin: 0 0 20px 0;
 
-                div {
-                    right: 0;
-                    p {
-                        width: 220px;
-                        font-size: 22px;
+                                div {
+                                    right: 0;
+                                    p {
+                                        width: 195px;
+                                        font-size: 22px;
+                                    }
+
+                                    button {
+                                        margin: 0;
+                                    }
+                                }
+                            }
+
+                            .card2-col {
+                                max-width: 400px;
+                                div {
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 30px;
+                                    p {
+                                        width: 137px;
+                                        height: 100px;
+                                        font-size: 22px;
+                                        font-family: "chakraPetch";
+                                        font-weight: 600;
+                                        text-align: center;
+                                    }
+
+                                    button {
+                                        background: none;
+                                        color: @white;
+                                        width: 162px;
+                                        height: 40px;
+                                        border-radius: 90px;
+                                        border: 2px solid @white;
+                                        margin-top: 0;
+                                        font-family: "Montserrat";
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
                     }
+                    .details-banner {
+                        grid-area: details-banner;
+                        position: relative;
+                        max-width: 1240px;
+                        margin: 0 auto;
 
-                    button {
-                        margin: 0;
+                        div {
+                            position: absolute;
+                            top: 50%;
+                            left: 10px;
+                            transform: translateY(-50%);
+                            p {
+                                width: 302px;
+                                height: 26px;
+                                font-size: 18px;
+                                font-family: "chakraPetch";
+                                font-weight: 600;
+                                letter-spacing: 2px;
+                                margin-top: 50px;
+                            }
+
+                            button {
+                                background: none;
+                                color: @white;
+                                width: 123px;
+                                height: 32px;
+                                border-radius: 90px;
+                                border: 2px solid @white;
+                                margin: 19px 0 49px 0;
+                                font-family: "Montserrat";
+                                font-weight: 400;
+                            }
+                        }
                     }
                 }
-            }
-
-            .card2-col {
-                max-width: 400px;
-                div {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: 50px;
-                    p {
-                        width: 137px;
-                        height: 100px;
-                        font-size: 22px;
-                        font-family: "chakraPetch";
-                        font-weight: 600;
-                        text-align: center;
-                    }
-
-                    button {
-                        background: none;
-                        color: @white;
-                        width: 162px;
-                        height: 40px;
-                        border-radius: 90px;
-                        border: 2px solid @white;
-                        margin-top: 0;
-                        font-family: "Montserrat";
-                        font-weight: 400;
-                    }
-                }
-            }
-        }
-    }
-    .details-banner {
-        grid-area: details-banner;
-        position: relative;
-        max-width: 1240px;
-        margin: 0 auto;
-
-        div {
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            p {
-                width: 302px;
-                height: 26px;
-                font-size: 18px;
-                font-family: "chakraPetch";
-                font-weight: 600;
-                letter-spacing: 2px;
-                margin-top: 50px;
-            }
-
-            button {
-                background: none;
-                color: @white;
-                width: 162px;
-                height: 29px;
-                border-radius: 90px;
-                border: 2px solid @white;
-                margin: 19px 0 49px 0;
-                font-family: "Montserrat";
-                font-weight: 400;
             }
         }
     }
 }
 
 @media screen and (max-width: 370px) {
-    .container {
-        .row {
-            .card1-col {
-                max-width: 400px;
-                margin: 0 0 20px 0;
+    .page-wrapper {
+        .page-main {
+            .columns {
+                .column.main {
+                    .container {
+                        .row {
+                            .card1-col {
+                                max-width: 400px;
+                                margin: 0 0 20px 0;
 
-                div {
-                    right: 20px;
-                    p {
-                        width: 140px;
-                        font-size: 22px;
+                                div {
+                                    right: 20px;
+                                    p {
+                                        width: 140px;
+                                        font-size: 22px;
+                                    }
+
+                                    button {
+                                        margin: 0;
+                                        width: 130px;
+                                    }
+                                }
+                            }
+
+                            .card2-col {
+                                max-width: 400px;
+                                div {
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 20px;
+                                    p {
+                                        width: 137px;
+                                        height: 100px;
+                                        font-size: 22px;
+                                        font-family: "chakraPetch";
+                                        font-weight: 600;
+                                        text-align: center;
+                                    }
+
+                                    button {
+                                        background: none;
+                                        color: @white;
+                                        width: 130px;
+                                        height: 40px;
+                                        border-radius: 90px;
+                                        border: 2px solid @white;
+                                        margin-top: 0;
+                                        font-family: "Montserrat";
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
                     }
+                    .details-banner {
+                        grid-area: details-banner;
+                        position: relative;
+                        max-width: 1240px;
+                        margin: 0 auto;
 
-                    button {
-                        margin: 0;
-                        width: 130px;
+                        div {
+                            position: absolute;
+                            top: 50%;
+                            left: 10px;
+                            transform: translateY(-50%);
+                            p {
+                                width: 265px;
+                                height: 17px;
+                                font-size: 15px;
+                                font-family: "chakraPetch";
+                                font-weight: 600;
+                                letter-spacing: 2px;
+                                margin-top: 50px;
+                            }
+
+                            button {
+                                background: none;
+                                color: @white;
+                                width: 101px;
+                                height: 28px;
+                                border-radius: 90px;
+                                border: 2px solid @white;
+                                margin: 19px 0 49px 0;
+                                font-family: "Montserrat";
+                                font-weight: 400;
+                                font-size: 9px;
+                            }
+                        }
                     }
                 }
-            }
-
-            .card2-col {
-                max-width: 400px;
-                div {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: 50px;
-                    p {
-                        width: 137px;
-                        height: 100px;
-                        font-size: 22px;
-                        font-family: "chakraPetch";
-                        font-weight: 600;
-                        text-align: center;
-                    }
-
-                    button {
-                        background: none;
-                        color: @white;
-                        width: 130px;
-                        height: 40px;
-                        border-radius: 90px;
-                        border: 2px solid @white;
-                        margin-top: 0;
-                        font-family: "Montserrat";
-                        font-weight: 400;
-                    }
-                }
-            }
-        }
-    }
-    .details-banner {
-        grid-area: details-banner;
-        position: relative;
-        max-width: 1240px;
-        margin: 0 auto;
-
-        div {
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            p {
-                width: 265px;
-                height: 26px;
-                font-size: 16px;
-                font-family: "chakraPetch";
-                font-weight: 600;
-                letter-spacing: 2px;
-                margin-top: 50px;
-            }
-
-            button {
-                background: none;
-                color: @white;
-                width: 120px;
-                height: 29px;
-                border-radius: 90px;
-                border: 2px solid @white;
-                margin: 19px 0 49px 0;
-                font-family: "Montserrat";
-                font-weight: 400;
-                font-size: 10px;
             }
         }
     }
