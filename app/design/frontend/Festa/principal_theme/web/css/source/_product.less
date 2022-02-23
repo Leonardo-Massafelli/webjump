@@ -158,3 +158,43 @@
         }
     }
 }
+
+//MEDIA QUERIES
+
+@media screen and (max-width:471px) {
+    .page-main{
+        .columns{
+            .column.main{
+                .products.wrapper.grid.products-grid{
+                    .products.list.items.product-items{
+                        li{
+                            width: calc((101% - 2%)/2);
+                        }
+                    }
+                }
+
+                 
+            }
+        }
+         
+    } 
+}
+
+@media screen and (max-width:380px) {
+    .page-main{
+        .columns{
+            .column.main{
+                .toolbar.toolbar-products{
+                    .toolbar-sorter.sorter{
+                        label{
+                            display: none
+                        }
+                    }
+                }
+
+                 
+            }
+        }
+         
+    } 
+}
