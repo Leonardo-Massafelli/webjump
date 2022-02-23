@@ -126,6 +126,13 @@ class TranslatePartyCategories implements DataPatchInterface
                 'meta' => 'Festa | Commemorative Dates - Birthday',
                 'url' => 'birthday'
             ],
+            [
+                'original-name' => 'Halloween',
+                'name' => 'Halloween',
+                'parent' => $commemorativedatesId,
+                'meta' => 'Festa | Commemorative Dates - Halloween',
+                'url' => 'halloween-en'
+            ],
 
             /*SUBCATEGORIE OF Themed Party*/
             [
@@ -141,6 +148,13 @@ class TranslatePartyCategories implements DataPatchInterface
                 'parent' => $themedPartyId,
                 'meta' => 'Festa | Themed Party - Super Heroes',
                 'url' => 'super-heroes'
+            ],
+            [
+                'original-name' => 'Pool Party',
+                'name' => 'Pool Party',
+                'parent' => $themedPartyId,
+                'meta' => 'Festa | Themed Party - Super Heroes',
+                'url' => 'pool-party-en'
             ],
 
             /* SUBCATEGORIES OF CHILDRENS PARTY */
@@ -181,6 +195,13 @@ class TranslatePartyCategories implements DataPatchInterface
                 'parent' => $decorationsId,
                 'meta' => 'Festa | Decorations - Decorative Panels',
                 'url' => 'decorative-panels'
+            ],
+            [
+                'original-name' => 'Topper',
+                'name' => 'Topper',
+                'parent' => $decorationsId,
+                'meta' => 'Festa | Decorations - Decorative Panels',
+                'url' => 'topper-en'
             ],
         ];
     }

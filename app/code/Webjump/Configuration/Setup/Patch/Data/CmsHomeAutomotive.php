@@ -123,7 +123,7 @@ class CmsHomeAutomotive implements DataPatchInterface
 
         $this->moduleDataSetup->startSetup();
         $scopes = [
-            ScopeInterface::SCOPE_STORE
+            ScopeInterface::SCOPE_STORES
         ];
 
         $this->pageFactory->create()->setData($pageData)->save();
@@ -180,7 +180,7 @@ class CmsHomeAutomotive implements DataPatchInterface
 
         $this->moduleDataSetup->startSetup();
         $scopes = [
-            ScopeInterface::SCOPE_STORE
+            ScopeInterface::SCOPE_STORES
         ];
 
         $this->pageFactory->create()->setData($pageDataPT)->save();

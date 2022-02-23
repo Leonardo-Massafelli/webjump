@@ -93,7 +93,7 @@ class CmsHomeParty implements DataPatchInterface
 
         $this->moduleDataSetup->startSetup();
         $scopes = [
-            ScopeInterface::SCOPE_STORE
+            ScopeInterface::SCOPE_STORES
         ];
 
         $this->pageFactory->create()->setData($pageData)->save();
@@ -110,7 +110,7 @@ class CmsHomeParty implements DataPatchInterface
             'meta_description' => '', // cms page meta description
             'identifier' => self::IDENTIFIER_NAME, // cms page identifier
             'content_heading' => '', // cms page content heading
-            'content' => '<div class="banner"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/halloween.html"><img src="{{media url="wysiwyg/main-banner.png"}}" alt=""></a></div>
+            'content' => '<div class="banner"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/halloween-en.html"><img src="{{media url="wysiwyg/main-banner.png"}}" alt=""></a></div>
             <div class="flex-cards">
             <div class="festaJunina"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/feast-of-saint-john.html"> <img src="{{media url="wysiwyg/festa_junina.png"}}" alt=""> </a></div>
             <div class="carnaval"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/carnival.html"> <img src="{{media url="wysiwyg/carnaval.png"}}" alt=""> </a></div>
@@ -126,7 +126,7 @@ class CmsHomeParty implements DataPatchInterface
 
         $this->moduleDataSetup->startSetup();
         $scopes = [
-            ScopeInterface::SCOPE_STORE
+            ScopeInterface::SCOPE_STORES
         ];
 
         $this->pageFactory->create()->setData($pageDataEn)->save();
