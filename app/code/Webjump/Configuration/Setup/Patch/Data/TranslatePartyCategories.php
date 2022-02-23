@@ -47,15 +47,15 @@ class TranslatePartyCategories implements DataPatchInterface
     }
     public function data()
     {
-        $commemorativedatesId = $this->getCategoryId('Datas Comemorativas');
+        $commemorativedatesId = $this->getCategoryId('Datas comemorativas');
         $themedPartyId = $this->getCategoryId('Festa temática');
-        $childrensPartyId = $this->getCategoryId('Festa Infantil');
-        $baloonsId = $this->getCategoryId('Balões e Bexigas');
+        $childrensPartyId = $this->getCategoryId('Festa infantil');
+        $baloonsId = $this->getCategoryId('Balões e bexigas');
         $decorationsId = $this->getCategoryId('Decoração');
 
         return [
             [
-                'original-name' => 'Datas Comemorativas',
+                'original-name' => 'Datas comemorativas',
                 'name' => 'Commemorative Dates',
                 'parent' => null,
                 'meta' => 'Festa | Commemorative Dates',
@@ -188,10 +188,11 @@ class TranslatePartyCategories implements DataPatchInterface
     public static function getDependencies()
     {
         return [
-            CreateCategories:: class,
+            CreateCategories::class,
             CreateWebsites::class,
             CreateRootCategories::class,
-            CreateSubCategories::class
+            CreateSubCategories::class,
+            AddMissingSubCategories::class
         ];
     }
 

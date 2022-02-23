@@ -59,7 +59,7 @@ class FooterLinksFesta4
             <li><a>Central de dúvidas</a></li>
             </ul>
             </div>',
-            'stores' => [$festa->getId(),$festa_en->getId()],
+            'stores' => [$festa->getId()],
             'is_active' => 1,
         ];
         $headerNoticeBlock = $this->blockFactory
@@ -74,6 +74,25 @@ class FooterLinksFesta4
         } else {
             $headerNoticeBlock->setContent($headerNoticeData['content'])->save();
         }
+
+        $headerNoticeDataEn = [
+            'title' => 'festival',
+            'identifier' => self::BLOCK_IDENTIFIER,
+            'content' => '<div>
+            <h3>Festival</h3>
+            <ul>
+            <li><a>About Us</a></li>
+            <li><a>Doubts</a></li>
+            </ul>
+            </div>',
+            'stores' => [$festa_en->getId()],
+            'is_active' => 1,
+        ];
+        $headerNoticeBlockEn = $this->blockFactory
+            ->create()
+            ->load($headerNoticeDataEn['identifier'], 'identifier');
+
+            $headerNoticeBlockEn->setData($headerNoticeDataEn)->save();
     }
 
     /**
@@ -85,7 +104,7 @@ class FooterLinksFesta4
          * No dependencies for this
          */
         return [
-            CreateWebsites::class 
+            CreateWebsites::class
         ];
     }
 

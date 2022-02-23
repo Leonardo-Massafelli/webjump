@@ -62,7 +62,7 @@ class FooterLinks3
             <li><a href="#">Financing</a></li>
             </ul>
             </div>',
-            'stores' => [$automotivo->getId(),$automotivo_en->getId()],
+            'stores' => [$automotivo_en->getId()],
             'is_active' => 1,
         ];
         $headerNoticeBlock = $this->blockFactory
@@ -77,6 +77,29 @@ class FooterLinks3
         } else {
             $headerNoticeBlock->setContent($headerNoticeData['content'])->save();
         }
+
+
+        $headerNoticeDataPT = [
+            'title' => 'footer links block3',
+            'identifier' => self::BLOCK_IDENTIFIER,
+            'content' => '<div class="footer-links">
+            <h3>Comprar</h3>
+            <ul>
+            <li><a href="#">Solicite uma Cotação</a></li>
+            <li><a href="#">Estimar um Pagamento</a></li>
+            <li><a href="#">Valor de Troca</a></li>
+            <li><a href="#">Locação</a></li>
+            <li><a href="#">Financiamento</a></li>
+            </ul>
+            </div>',
+            'stores' => [$automotivo->getId()],
+            'is_active' => 1,
+        ];
+        $headerNoticeBlockPT = $this->blockFactory
+            ->create()
+            ->load($headerNoticeDataPT['identifier'], 'identifier');
+
+            $headerNoticeBlockPT->setData($headerNoticeDataPT)->save();
     }
 
     /**
@@ -88,7 +111,7 @@ class FooterLinks3
          * No dependencies for this
          */
         return [
-            CreateWebsites::class 
+            CreateWebsites::class
         ];
     }
 
