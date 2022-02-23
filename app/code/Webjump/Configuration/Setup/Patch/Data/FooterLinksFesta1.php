@@ -61,7 +61,7 @@ class FooterLinksFesta1
             <li><a>Comprar no atacado</a></li>
             </ul>
             </div>',
-            'stores' => [$festa->getId(),$festa_en->getId()],
+            'stores' => [$festa->getId()],
             'is_active' => 1,
         ];
         $headerNoticeBlock = $this->blockFactory
@@ -76,6 +76,29 @@ class FooterLinksFesta1
         } else {
             $headerNoticeBlock->setContent($headerNoticeData['content'])->save();
         }
+
+        ///////// BLOCK ENGLISH
+        ///
+        $headerNoticeDataEn = [
+            'title' => 'institutional',
+            'identifier' => self::BLOCK_IDENTIFIER,
+            'content' => '<div>
+            <h3>Institutional</h3>
+            <ul>
+            <li><a>Our Advantages</a></li>
+            <li><a>Physical Stores</a></li>
+            <li><a>Exchange and Returns</a></li>
+            <li><a>Bulk Purchases</a></li>
+            </ul>
+            </div>',
+            'stores' => [$festa_en->getId()],
+            'is_active' => 1,
+        ];
+        $headerNoticeBlockEn = $this->blockFactory
+            ->create()
+            ->load($headerNoticeDataEn['identifier'], 'identifier');
+
+            $headerNoticeBlockEn->setData($headerNoticeDataEn)->save();
     }
 
     /**
@@ -87,7 +110,7 @@ class FooterLinksFesta1
          * No dependencies for this
          */
         return [
-            CreateWebsites::class 
+            CreateWebsites::class
         ];
     }
 

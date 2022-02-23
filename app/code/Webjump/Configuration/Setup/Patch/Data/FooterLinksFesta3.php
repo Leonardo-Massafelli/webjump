@@ -60,7 +60,7 @@ class FooterLinksFesta3
             <li><a>Termos e condições</a></li>
             </ul>
             </div>',
-            'stores' => [$festa->getId(),$festa_en->getId()],
+            'stores' => [$festa->getId()],
             'is_active' => 1,
         ];
         $headerNoticeBlock = $this->blockFactory
@@ -75,6 +75,26 @@ class FooterLinksFesta3
         } else {
             $headerNoticeBlock->setContent($headerNoticeData['content'])->save();
         }
+
+        $headerNoticeDataEn = [
+            'title' => 'support',
+            'identifier' => self::BLOCK_IDENTIFIER,
+            'content' => '<div>
+            <h3>Support</h3>
+            <ul>
+            <li><a>Shipping Policy</a></li>
+            <li><a>Privacy Policy</a></li>
+            <li><a>Terms and Conditions</a></li>
+            </ul>
+            </div>',
+            'stores' => [$festa_en->getId()],
+            'is_active' => 1,
+        ];
+        $headerNoticeBlockEn = $this->blockFactory
+            ->create()
+            ->load($headerNoticeDataEn['identifier'], 'identifier');
+
+        $headerNoticeBlockEn->setData($headerNoticeDataEn)->save();
     }
 
     /**
@@ -86,7 +106,7 @@ class FooterLinksFesta3
          * No dependencies for this
          */
         return [
-            CreateWebsites::class 
+            CreateWebsites::class
         ];
     }
 
