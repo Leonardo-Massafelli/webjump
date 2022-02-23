@@ -1,3 +1,61 @@
+// Modal
+
+.modals-wrapper {
+    .modal-popup.confirm {
+        .modal-inner-wrap {
+            .modal-footer {
+                button {
+                    background: @black;
+                    border: none;
+
+                    span {
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Muini-cart
+.minicart-wrapper.active {
+    .block-minicart {
+        .block-content {
+            .actions {
+                .primary {
+                    button {
+                        background: @black;
+                        border: none;
+                    }
+                }
+                .secondary {
+                    a {
+                        span {
+                            color: @black;
+                        }
+                    }
+                }
+            }
+
+            .minicart-items-wrapper {
+                .minicart-items {
+                    li {
+                        .product {
+                            .product-item-details {
+                                .product-item-name {
+                                    a {
+                                        color: @black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 // Header
 
 .page-header {
@@ -98,6 +156,7 @@
                 ul {
                     li {
                         margin: 0;
+                        display: block;
                     }
                 }
             }
