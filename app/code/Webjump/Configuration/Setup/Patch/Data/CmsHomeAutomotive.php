@@ -85,7 +85,7 @@ class CmsHomeAutomotive implements DataPatchInterface
             'meta_description' => '', // cms page meta description
             'identifier' => self::IDENTIFIER_NAME, // cms page identifier
             'content_heading' => '', // cms page content heading
-            'content' => '<div class="banner-principal"><a href="{{config path="web/unsecure/base_url"}}volt-sx-plaid-red.html"><img src="{{media url="wysiwyg/banner_principal_full_cut4.png"}}" alt=""></a></div>
+            'content' => '<div class="banner-principal"><a href="{{config path="web/unsecure/base_url"}}volt-sx-en.html"><img src="{{media url="wysiwyg/banner_principal_full_cut4.png"}}" alt=""></a></div>
             <div class="container">
             <div class="row">
             <div class="car-col"><a href="{{config path="web/unsecure/base_url"}}volt-3-s-plaid.html"><img src="{{media url="wysiwyg/Grupo_28.png"}}" alt=""></div>
@@ -142,7 +142,7 @@ class CmsHomeAutomotive implements DataPatchInterface
             'meta_description' => '', // cms page meta description
             'identifier' => self::IDENTIFIER_NAME, // cms page identifier
             'content_heading' => '', // cms page content heading
-            'content' => '<div class="banner-principal"><a href="{{config path="web/unsecure/base_url"}}volt-sx-plaid-vermelho.html"><img src="{{media url="wysiwyg/banner_principal_full_cut4.png"}}" alt=""></a></div>
+            'content' => '<div class="banner-principal"><a href="{{config path="web/unsecure/base_url"}}volt-sx.html"><img src="{{media url="wysiwyg/banner_principal_full_cut4.png"}}" alt=""></a></div>
             <div class="container">
             <div class="row">
             <div class="car-col"><a href="{{config path="web/unsecure/base_url"}}volt-3-s-plaid.html"><img src="{{media url="wysiwyg/Grupo_28.png"}}" alt=""></div>
