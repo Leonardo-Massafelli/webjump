@@ -1,9 +1,9 @@
+
+
 //Header
-
-
 .page-header {
     background: @white;
-    
+
     .panel.wrapper {
         background: @cream-white;
         color: @grey;
@@ -63,7 +63,7 @@
     }
 
     .minicart-wrapper{
-        margin-top: 2px;
+        margin-top: 6px;
 
         .action.showcart{
             display: flex;
@@ -85,9 +85,74 @@
                 font-family: "OpenSans-Bold"
             }
         }
-
     }
 
+    .minicart-wrapper.active{
+        .block-minicart{
+            .block-content >{
+                .items-total{
+                    span{
+                        font-family: "Poppins-Medium";
+                    }
+                }
+                .subtotal{
+                    .label{
+                        font-family: "Poppins-Medium";
+                    }
+                }
+
+                .minicart-items-wrapper{
+                    .minicart-items{
+                        .product-item-name{
+                            a{
+                                font-family: 'Poppins-Medium';
+                                color: @grey-rock;
+                                font-size: 15px;
+                            }
+                        }
+                        .product-item-details{
+                            .price{
+                                font-family: 'Poppins-Medium';
+                            }
+                        }
+                        .product-item-pricing .label{
+                            font-family: "Poppins-Medium";
+                        }
+                        .update-cart-item{
+                            background: @purple;
+                            box-shadow: none;
+                            font-size: 15px;
+                            color: @white;
+                            font-family: 'OpenSans-Bold';
+                            &:hover{
+                                background: @dark-purple;
+                            }
+                        }
+                    }
+
+                }
+            
+
+            } 
+            .actions >{
+                .secondary{
+                    a{
+                        font-family: 'Poppins-Medium';
+                        color: @grey-rock;
+                        font-size: 15px;
+                    }
+                }
+            } 
+            .primary .action.primary{
+                background: @orange;
+                font-family: "Poppins-Bold";
+                border: 0;
+                &:hover{
+                    background: @dark-orange;
+                }
+            }
+        }
+    }
 }
 
 .sections.nav-sections{
@@ -106,6 +171,31 @@
             }
         }
     }
+}
+
+//Modal de aviso se deseja excluir
+.modals-wrapper{
+        .modal-popup.confirm{
+            .modal-inner-wrap{
+                 .modal-content{
+                    font-family: 'Poppins-Medium';
+                    font-size: 15px;
+                 } 
+            }
+        }
+        .modal-popup{
+            .modal-footer{
+                button{
+                    box-shadow: none;
+                    color: @white;
+                    background: @orange;
+                    font-family: 'Poppins-Bold';
+                    &:hover{
+                        background: @dark-orange;
+                    }
+                }
+            } 
+        } 
 }
 
 
