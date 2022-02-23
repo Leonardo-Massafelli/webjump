@@ -59,6 +59,9 @@
             font-family: "Poppins-Medium";
             letter-spacing: 0.38px;
             border: 1px solid #a6a6a6;
+            &::placeholder{
+                color: @bright-grey;
+            }
         }
     }
 
@@ -171,31 +174,6 @@
             }
         }
     }
-}
-
-//Modal de aviso se deseja excluir
-.modals-wrapper{
-        .modal-popup.confirm{
-            .modal-inner-wrap{
-                 .modal-content{
-                    font-family: 'Poppins-Medium';
-                    font-size: 15px;
-                 } 
-            }
-        }
-        .modal-popup{
-            .modal-footer{
-                button{
-                    box-shadow: none;
-                    color: @white;
-                    background: @orange;
-                    font-family: 'Poppins-Bold';
-                    &:hover{
-                        background: @dark-orange;
-                    }
-                }
-            } 
-        } 
 }
 
 
