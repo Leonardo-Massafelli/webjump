@@ -1,203 +1,29 @@
 // Main Page
 
-
-
 .cms-index-index main{
     padding-left: 0;
     padding-right: 0;
 }
-.page-main{
-    .flex-cards{
-        display: flex;
-        justify-content: space-around;
-        margin: 20px 10px 20px 10px;
-
-            div{
-                max-height: 737px;
-                a{
-                    img{
-                        max-width: 100%;
-                    }
-                }
-            }
-
-    }
-}
-// product button
-.page-wrapper {
-    font-family: 'Poppins-Medium';
-    .maincontent{
-        .page-title-wrapper{
-            h1{
-                span{
-                    font-family: "Poppins-Medium";
-                }
-            }
-        }
-
-        .columns{
-            .sidebar.sidebar-additional{
-                font-family: "Poppins-Medium";
-            }
-        }
-    }
-    .breadcrumbs{
-        .items{
-            .item.home{
-                a{
-                    color:@dark-red;
-                }
-
-            }
-            .item.category{
-                a{  
-                    color:@dark-red;
-                }
-
-            }
-            .item.category44{
-                color:@dark-orange;
-
-            }
-            .item.product{
-                color: @dark-orange;
-            }
-
-        }
-    } 
-
-    .page-main {
-        .columns {
-            .column.main {
-                .products.wrapper.grid.products-grid{
-                    ol{
-                        li{
-                            .product-item-info{
-                                .product.details.product-item-details{
-                                    a{
-
-                                        font-size: 15px;
-                                        text-align: left;
-                                        letter-spacing: 0.20px;
-
-                                    }
-                                }
-                                .price-box.price-final_price{
-                                    span{
-                                        font-family: "Poppins-Bold";
-                                        color: @pink;
-                                        letter-spacing: -0.19px;
-                                        line-height: 24.97px;
-
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .product-item-inner{
-                        .product.actions.product-item-actions{
-                            .actions-primary{
-                                form{
-                                    button{
-                                            background: @orange;
-                                            font-family: 'Poppins-Bold';
-                                            border: none;
-                                            border-radius: 10px;
-                                            height: 40px;
-                                            width: 213px;
-                                        &:hover{
-                                            background: @dark-orange;
-                                        }
-                                    }
-                                }
-                            }
+.page-wrapper{
+    .page-main{
+        .flex-cards{
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 10px 20px 10px;
+    
+                div{
+                    max-height: 737px;
+                    a{
+                        img{
+                            max-width: 100%;
                         }
                     }
                 }
-                .product-info-main {
-                    .page-title-wrapper.product{
-                        h1{
-                            font-family: "Poppins-Medium";
-                        }
-                    }
-                    .product-reviews-summary{
-                        a{
-                            color: @grey-rock;
-                        }
-
-                    }
-                    .product-info-price{
-                        .price-box{
-                            .price-container{
-                                .price{
-                                    font-family: "Poppins-Bold";
-                                }
-                            } 
-                        }
-                    }  
-                    .product-add-form {
-                        form {
-                            .box-tocart {
-                                .fieldset {
-                                    .actions {
-                                        button {
-                                            background-color:@orange;
-                                            border: none;
-                                            font-family: "Poppins-Bold";
-                                            color: @white;
-                                            font-size: 15px;
-                                            &:hover{
-                                                background-color: @dark-orange;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .bundle-actions{
-                        button{
-                            background: @orange;
-                            border: none;
-                            font-family: 'Poppins-Bold';
-                            &:hover{
-                                background: @dark-orange;
-                            }
-                        }
-                    }
-                }
-                .bundle-options-container{
-                    .block-bundle-summary{
-                        .box-tocart{
-                            .action.primary{
-                                background: @orange;
-                                border: none;
-                                font-family: 'Poppins-Bold';
-                                &:hover{
-                                    background: @dark-orange;
-                                }
-                            }
-                        }
-                    } 
-                }
-                .checkout-container{
-                    .checkout-shipping-method{
-                        .actions-toolbar{
-                            .action.primary.button{
-                                background: @orange;
-                                border: none;
-                                font-family: 'Poppins-Bold';
-                                &:hover{
-                                    background: @dark-orange;
-                                }
-                            }
-                        }
-                    }  
-                }
-            }
+    
         }
     }
 }
+
 
 
 @media screen and (max-width:425px) {
