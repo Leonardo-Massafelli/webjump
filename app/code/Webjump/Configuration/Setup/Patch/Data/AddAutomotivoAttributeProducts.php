@@ -18,6 +18,8 @@ class AddAutomotivoAttributeProducts implements DataPatchInterface
 
     const AUTOMOTIVO_AR_CONDICIONADO = 'Ar_condicionado';
 
+    const AUTOMOTIVO_COLOR = 'color';
+
 
     /**
      * @var ModuleDataSetupInterface $moduleDataSetup
@@ -117,6 +119,28 @@ class AddAutomotivoAttributeProducts implements DataPatchInterface
         $sortOrder = 52;
         $this->productAttributeManagement
             ->assign($attributeSetId, $attributeGroupId, static::AUTOMOTIVO_AUTO, $sortOrder);
+
+
+        $eavSetup->addAttribute(
+            Product::ENTITY,
+            static::AUTOMOTIVO_COLOR,
+            [
+                'attribute_set' => 'Automotivo',
+                'user_defined' => true,
+                'type' => 'text',
+                'label' => 'cor',
+                'input' => 'select',
+                'required' => false,
+                'global' => ScopedAttributeInterface::SCOPE_GLOBAL,
+                'used_in_product_listing' => true,
+                'system' => false,
+                'visible_on_front' => true,
+            ]
+        );
+
+        $sortOrder = 54;
+        $this->productAttributeManagement
+            ->assign($attributeSetId, $attributeGroupId, static::AUTOMOTIVO_COLOR, $sortOrder);
     }
 
     public function getAliases()

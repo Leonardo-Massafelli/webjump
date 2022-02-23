@@ -18,6 +18,8 @@ class AddFestaAttributeProducts implements DataPatchInterface
 
     const FESTA_QTD = 'festa_qtd';
 
+    const FESTA_COLOR = 'color';
+
 
     /**
      * @var ModuleDataSetupInterface $moduleDataSetup
@@ -115,6 +117,28 @@ class AddFestaAttributeProducts implements DataPatchInterface
         $sortOrder = 52;
         $this->productAttributeManagement
             ->assign($attributeSetId, $attributeGroupId, static::FESTA_QTD, $sortOrder);
+
+
+        $eavSetup->addAttribute(
+            Product::ENTITY,
+            static::FESTA_COLOR,
+            [
+                'attribute_set' => 'Festa',
+                'user_defined' => true,
+                'type' => 'text',
+                'label' => 'Cor',
+                'input' => 'select',
+                'required' => false,
+                'global' => ScopedAttributeInterface::SCOPE_GLOBAL,
+                'used_in_product_listing' => true,
+                'system' => false,
+                'visible_on_front' => true,
+            ]
+        );
+
+        $sortOrder = 54;
+        $this->productAttributeManagement
+            ->assign($attributeSetId, $attributeGroupId, static::FESTA_COLOR, $sortOrder);
     }
 
     public function getAliases()

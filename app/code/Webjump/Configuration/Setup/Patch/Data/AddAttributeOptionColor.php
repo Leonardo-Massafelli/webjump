@@ -197,6 +197,10 @@ class AddAttributeOptionColor implements DataPatchInterface
 
     public static function getDependencies()
     {
-        return[CreateWebsites::class];
+        return[
+            CreateWebsites::class,
+            AddAutomotivoAttributeProducts::class,
+            AddFestaAttributeProducts::class,
+        ];
     }
 }
