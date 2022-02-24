@@ -179,6 +179,101 @@ body.cms-index-index {
     }
 }
 
+// Carrousel
+
+.page-wrapper {
+    .page-main {
+        .columns {
+            .column.main {
+                .block-products-list {
+                    margin-top: 129px;
+                    .block-content {
+                        .products-grid.grid {
+                            .widget-product-grid {
+                                .slick-list.draggable {
+                                    .slick-track {
+                                        text-align: center;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        .slick-active {
+                                            max-width: 500px;
+
+                                            .product-item {
+                                                .product-item-info {
+                                                    background: black;
+                                                    height: 500px;
+                                                    border: none;
+
+                                                    .product-item-details {
+                                                        .product-item-link {
+                                                            font-size: 30px;
+                                                            font-family: "chakraPetch";
+                                                            font-weight: 500;
+                                                            color: @white;
+                                                        }
+                                                        .price-box {
+                                                            .price-container {
+                                                                .price-label {
+                                                                    font-size: 18px;
+                                                                    font-family: "chakraPetch";
+                                                                    font-weight: 300;
+                                                                    color: @white;
+                                                                }
+                                                                .price-wrapper {
+                                                                    .price {
+                                                                        font-size: 18px;
+                                                                        font-family: "chakraPetch";
+                                                                        font-weight: 300;
+                                                                        color: @white;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        .product-item-inner {
+                                                            clip: unset;
+                                                            overflow: visible;
+                                                            background: black;
+                                                            border: none;
+                                                            display: table;
+                                                            margin: 0 auto;
+
+                                                            .product-item-actions {
+                                                                form {
+                                                                    button {
+                                                                        background: none;
+                                                                        color: @white;
+                                                                        width: 172px;
+                                                                        height: 39px;
+                                                                        border-radius: 90px;
+                                                                        border: 2px
+                                                                            solid
+                                                                            @white;
+                                                                        margin-top: 19px;
+                                                                        font-family: "Montserrat";
+                                                                        font-weight: 400;
+                                                                    }
+                                                                }
+                                                                .actions-secondary {
+                                                                    display: none;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1104px) {
     .page-wrapper {
         .page-main {
@@ -333,6 +428,50 @@ body.cms-index-index {
                                         margin-top: 19px;
                                         font-family: "Montserrat";
                                         font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .block-products-list {
+                        .block-content {
+                            .products-grid.grid {
+                                .widget-product-grid {
+                                    .slick-list.draggable {
+                                        .slick-track {
+                                            .slick-active {
+                                                .product-item {
+                                                    .product-item-info {
+                                                        .product-item-details {
+                                                            .price-box {
+                                                                .price-container {
+                                                                    .price-label {
+                                                                        font-size: 16px;
+                                                                        font-family: "chakraPetch";
+                                                                        font-weight: 300;
+                                                                        color: @white;
+                                                                    }
+                                                                    .price-wrapper {
+                                                                        .price {
+                                                                            font-size: 16px;
+                                                                            font-family: "chakraPetch";
+                                                                            font-weight: 300;
+                                                                            color: @white;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            .product-item-name {
+                                                                .product-item-link {
+                                                                    font-size: 20px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
