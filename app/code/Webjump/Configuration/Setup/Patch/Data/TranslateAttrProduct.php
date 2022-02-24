@@ -38,9 +38,11 @@ class TranslateAttrProduct implements DataPatchInterface {
 
         $this->translateLabel(CreateWebsites::FESTA_EN_STORE_CODE, AddFestaAttributeProducts::FESTA_TEMA, 'Theme');
         $this->translateLabel(CreateWebsites::FESTA_EN_STORE_CODE, AddFestaAttributeProducts::FESTA_QTD, 'Quantity per package');
+        $this->translateLabel(CreateWebsites::FESTA_EN_STORE_CODE, AddFestaAttributeProducts::FESTA_COLOR, 'Color');
 
         $this->translateLabel(CreateWebsites::AUTOMOTIVO_EN_STORE_CODE, AddAutomotivoAttributeProducts::AUTOMOTIVO_AUTO, 'Automatic');
         $this->translateLabel(CreateWebsites::AUTOMOTIVO_EN_STORE_CODE, AddAutomotivoAttributeProducts::AUTOMOTIVO_AR_CONDICIONADO, 'Air conditioning');
+        $this->translateLabel(CreateWebsites::AUTOMOTIVO_EN_STORE_CODE, AddAutomotivoAttributeProducts::AUTOMOTIVO_COLOR, 'Color');
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }
