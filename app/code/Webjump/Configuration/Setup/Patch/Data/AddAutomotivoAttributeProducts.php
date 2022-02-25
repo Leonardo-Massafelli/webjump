@@ -128,7 +128,7 @@ class AddAutomotivoAttributeProducts implements DataPatchInterface
                 'attribute_set' => 'Automotivo',
                 'user_defined' => true,
                 'type' => 'text',
-                'label' => 'cor',
+                'label' => 'Cor',
                 'input' => 'select',
                 'required' => false,
                 'global' => ScopedAttributeInterface::SCOPE_GLOBAL,

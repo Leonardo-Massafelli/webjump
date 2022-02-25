@@ -145,7 +145,7 @@ class CreateWebsites implements DataPatchInterface
                     ],
                     'en' => [
                         'code' => self::AUTOMOTIVO_EN_STORE_CODE,
-                        'name' => 'Automotivo en',
+                        'name' => 'Automotive',
                         'sort_order' => '2',
                         'is_active' => '1'
                     ]
@@ -167,13 +167,13 @@ class CreateWebsites implements DataPatchInterface
                 'store' => [
                     'pt' => [
                         'code' => self::FESTA_STORE_CODE,
-                        'name' => 'Festa',
+                        'name' => 'Festival PT',
                         'sort_order' => '2',
                         'is_active' => '1'
                     ],
                     'en' => [
                         'code' => self::FESTA_EN_STORE_CODE,
-                        'name' => 'Festa en',
+                        'name' => 'Festival EN',
                         'sort_order' => '3',
                         'is_active' => '1'
                     ]

@@ -3,9 +3,22 @@
 .cms-index-index main{
     padding-left: 0;
     padding-right: 0;
+    max-width: 1440px;
 }
 .page-wrapper{
     .page-main{
+        .banner{
+            a{
+                width: 100%;
+                display: block;
+                height: 491px;
+                margin: 0 10px 0 0;
+                background: url('@{baseDir}images/principal_banner.png') no-repeat  0% 10%;
+                background-size: contain;
+            }
+
+             
+        }
         .flex-cards{
             display: flex;
             justify-content: space-around;
@@ -59,3 +72,101 @@
         }
     }  
 }
+
+@media screen and (max-width:1225px) {
+    .page-wrapper{
+        .page-main{
+            .banner{
+                a{
+                    height: 435px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1072px) {
+    .page-wrapper{
+        .page-main{
+            .banner{
+                a{
+                    height: 377px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:932px) {
+    .page-wrapper{
+        .page-main{
+            .banner{
+                a{
+                    height: 340px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:850px) {
+    .page-wrapper{
+        .page-main{
+            .banner{
+                a{
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:715px) {
+    .page-wrapper{
+        .page-main{
+            .banner{
+                a{
+                    height: 260px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:627px) {
+    .page-wrapper{
+        .page-main{
+            .banner{
+                a{
+                    height: 215px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:471px) {
+    .page-wrapper{
+        .page-main{
+            .banner{
+                a{
+                    height: 162px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:350px) {
+    .page-wrapper{
+        .page-main{
+            .banner{
+                a{
+                    height: 120px;
+                }
+            }
+        }
+    }
+}
+
+

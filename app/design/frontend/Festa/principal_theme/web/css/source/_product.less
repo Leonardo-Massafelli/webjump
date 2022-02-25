@@ -1,5 +1,15 @@
 .page-wrapper {
     font-family: 'Poppins-Medium';
+    .button{
+        background-color:@orange;
+        border: none;
+        font-family: "Poppins-Bold";
+        color: @white;
+        font-size: 15px;
+        &:hover{
+            background-color: @dark-orange;
+        }
+    }
     .maincontent{
         .page-title-wrapper{
             h1{
@@ -29,7 +39,9 @@
     .page-main {
         .columns {
             .column.main {
+
                 .products.wrapper.grid.products-grid{
+
                     ol{
                         li{
                             .product-item-info{
@@ -64,12 +76,29 @@
                                             border: none;
                                             border-radius: 10px;
                                             height: 40px;
-                                            width: 213px;
+                                            width: 100%;
                                         &:hover{
                                             background: @dark-orange;
                                         }
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+                .products.wrapper.list.products-list{
+                    ol{
+                        li{
+                            button{
+                                background: @orange;
+                                font-family: 'Poppins-Bold';
+                                border: none;
+                                border-radius: 10px;
+                                height: 40px;
+                                width: 213px;
+                            &:hover{
+                                background: @dark-orange;
+                            }
                             }
                         }
                     }
@@ -154,6 +183,18 @@
                         }
                     }  
                 }
+                .product-add-form{
+                    .product-options-bottom{
+                        .box-tocart .action.tocart:not(:last-child){
+                            background: @orange;
+                            border: none;
+                            font-family: 'Poppins-Bold';
+                            &:hover{
+                                background: @dark-orange;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -191,6 +232,17 @@
                         }
                     }
                 }
+                .product-item-inner{
+                    .product.actions.product-item-actions{
+                        .actions-primary{
+                            form{
+                                button{
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+                    }
+                }
 
                  
             }
@@ -198,3 +250,28 @@
          
     } 
 }
+
+
+.product-item-inner{
+    .product.actions.product-item-actions{
+        .actions-primary{
+            form{
+                button{
+                        background: @orange;
+                        font-family: 'Poppins-Bold';
+                        border: none;
+                        border-radius: 10px;
+                        height: 40px;
+                        width: 100%;
+                    &:hover{
+                        background: @dark-orange;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

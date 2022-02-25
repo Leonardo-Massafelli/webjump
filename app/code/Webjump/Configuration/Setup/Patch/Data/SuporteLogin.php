@@ -53,7 +53,7 @@ class SuporteLogin
             'title' => 'suport-login-link',
             'identifier' => self::BLOCK_IDENTIFIER,
             'content' => '<div class="suporte-login-links"><a>Support</a> <a href="http://automotivo.develop.com.br/customer/account/login/referer/aHR0cDovL2F1dG9tb3Rpdm8uZGV2ZWxvcC5jb20uYnIvP2F0aD0x/" class="suporte-login-links__login">Login</a></div>',
-            'stores' => [$automotivo->getId(),$automotivo_en->getId()],
+            'stores' => [$automotivo_en->getId()],
             'is_active' => 1,
         ];
         $headerNoticeBlock = $this->blockFactory
@@ -68,6 +68,23 @@ class SuporteLogin
         } else {
             $headerNoticeBlock->setContent($headerNoticeData['content'])->save();
         }
+
+        ///
+        $headerNoticeDataPT = [
+            'title' => 'suport-login-link',
+            'identifier' => self::BLOCK_IDENTIFIER,
+            'content' => '<div class="suporte-login-links"><a>Suporte</a> <a href="http://automotivo.develop.com.br/customer/account/login/referer/aHR0cDovL2F1dG9tb3Rpdm8uZGV2ZWxvcC5jb20uYnIvP2F0aD0x/" class="suporte-login-links__login">Login</a></div>',
+            'stores' => [$automotivo->getId()],
+            'is_active' => 1,
+        ];
+        $headerNoticeBlockPT = $this->blockFactory
+            ->create()
+            ->load($headerNoticeDataPT['identifier'], 'identifier');
+
+        /**
+         * Create the block if it does not exists, otherwise update the content
+         */
+            $headerNoticeBlockPT->setData($headerNoticeDataPT)->save();
     }
 
     /**
@@ -79,7 +96,7 @@ class SuporteLogin
          * No dependencies for this
          */
         return [
-            CreateWebsites::class 
+            CreateWebsites::class
         ];
     }
 
