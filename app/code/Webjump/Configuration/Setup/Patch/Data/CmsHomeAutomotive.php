@@ -114,7 +114,7 @@ class CmsHomeAutomotive implements DataPatchInterface
             <p>LITTLE DETAILS THAT MAKES A WHOLE DIFFERENCE</p>
             <button>GET TO KNOW</button></div>
             </div>
-            <p>{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="4" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</p>', // cms page content
+            <div class="carousel">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="4" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>', // cms page content
             'layout_update_xml' => '', // cms page layout xml
             'url_key' => self::IDENTIFIER_NAME, // cms page url key
             'is_active' => 1, // status enabled or disabled
@@ -172,7 +172,7 @@ class CmsHomeAutomotive implements DataPatchInterface
             <p>LITTLE DETAILS THAT MAKES A WHOLE DIFFERENCE</p>
             <button>GET TO KNOW</button></div>
             </div>
-            <p>{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="4" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</p>', // cms page content
+            <div class="carousel">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="4" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>', // cms page content
             'layout_update_xml' => '', // cms page layout xml
             'url_key' => self::IDENTIFIER_NAME, // cms page url key
             'is_active' => 1, // status enabled or disabled
