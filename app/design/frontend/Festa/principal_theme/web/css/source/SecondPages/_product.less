@@ -1,7 +1,7 @@
 .page-wrapper {
     font-family: 'Poppins-Medium';
 
-    .maincontent{
+    .page-main{
         .page-title-wrapper{
             h1{
                 span{
@@ -70,17 +70,16 @@
             }
         }
         .product-item-inner{
-
-
             .product.actions.product-item-actions{
                 .actions-primary{
+                    display: block;
                     form{
                         button{
                                 background: @orange;
                                 font-family: 'Poppins-Bold';
                                 border: none;
                                 border-radius: 10px;
-                                width: 209px;
+                                width: 100%;
                                 height: 55px;
                                 font-size: 20px;
                             &:hover{
@@ -97,7 +96,7 @@
             li{
                 .product-item-inner{
                     a{
-                        color: @pink;
+                        color: @pink
                     }
                 }
                 button{
@@ -231,6 +230,7 @@
 }
 
 //MEDIA QUERIES
+
 
 @media screen and (max-width:471px) {
     .page-main{

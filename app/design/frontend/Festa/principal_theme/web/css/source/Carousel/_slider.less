@@ -11,20 +11,26 @@
                             .slick-list.draggable{
                                 .slick-track{
                                     display: flex;
-                                    text-align: center;
                                     justify-content: center;
                                     align-items: center;
-                                    
+                                        .slick-active{
+                                            width: 400px;
+                                        }
+
                                         li{
                                             height: 520px;
                                             margin-top: 10px;
+                                            .product-item-info{
+                                                    border-color: white;
+                                                    box-shadow: none;
+                                                }
 
                                             .product-item-details{
                                                 color:@pink;
+                                                margin-left: 10px;
                                                 .product-item-inner{
                                                     clip: unset;
                                                     overflow: visible;
-                                                    border: none;
                                                     display: table;
                                                     margin: 0 auto;
                                                     box-shadow: none;
@@ -54,6 +60,9 @@
                                                             background: @dark-orange;
                                                         }
                                                     }
+                                                }
+                                                .actions-secondary{
+                                                    display: none;
                                                 }
 
                                             }
