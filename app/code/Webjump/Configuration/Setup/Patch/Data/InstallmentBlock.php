@@ -60,14 +60,26 @@ class InstallmentBlock
             ->create()
             ->load($headerNoticeData['identifier'], 'identifier');
 
-        /**
-         * Create the block if it does not exists, otherwise update the content
-         */
-        if (!$headerNoticeBlock->getId()) {
-            $headerNoticeBlock->setData($headerNoticeData)->save();
-        } else {
-            $headerNoticeBlock->setContent($headerNoticeData['content'])->save();
-        }
+        $headerNoticeBlock->setData($headerNoticeData)->save();
+
+
+        $automotive_en = $this->storeRepository->get(CreateWebsites::AUTOMOTIVO_EN_STORE_CODE);
+        $party_en = $this->storeRepository->get(CreateWebsites::FESTA_EN_STORE_CODE);
+
+        $headerNoticeDataEn = [
+            'title' => 'Parcelamento',
+            'identifier' => self::BLOCK_IDENTIFIER,
+            'content' => '<p class="parcelamento">Pay in installments up to 10x with minimum installments of $ ###,##</p>',
+            'stores' => [$automotive_en->getId(), $party_en->getId()],
+            'is_active' => 1,
+        ];
+        $headerNoticeBlockEn = $this->blockFactory
+            ->create()
+            ->load($headerNoticeDataEn['identifier'], 'identifier');
+
+
+        $headerNoticeBlockEn->setData($headerNoticeDataEn)->save();
+
     }
 
     /**
