@@ -94,26 +94,27 @@ class CmsHomeAutomotive implements DataPatchInterface
             <h2>UNIQUE.</h2>
             <h2>JUST LIKE YOU.</h2>
             </div>
-            <button>CUSTOMIZE</button></div>
+            <button><a href="{{config path="web/unsecure/base_url"}}volt-3-s-plaid.html">CUSTOMIZE</button></div>
             </div>
             <div class="row">
             <div class="cards card1-col"><a href="{{config path="web/unsecure/base_url"}}acessories-en/charging.html"><img src="{{media url="wysiwyg/charging.png"}}" alt="">
             <div>
             <p>CHARGING ACCESSORIES</p>
-            <button>BUY NOW</button></div>
+            <button><a href="{{config path="web/unsecure/base_url"}}acessories-en/charging.html">BUY NOW</button></div>
             </div>
-            <div class="cards card2-col"><a href="#"><img src="{{media url="wysiwyg/find_store.png"}}" alt="">
+            <div class="cards card2-col"><img src="{{media url="wysiwyg/find_store.png"}}" alt="">
             <div>
             <p>FIND A STORE</p>
             <button>SEARCH</button></div>
             </div>
             </div>
             </div>
-            <div class="details-banner"><a href="#"><img src="{{media url="wysiwyg/Agrupar_1.png"}}" alt="">
+            <div class="details-banner"><a href="#"><img src="{{media url="wysiwyg/Agrupar_1.png"}}" alt=""></a>
             <div>
             <p>LITTLE DETAILS THAT MAKES A WHOLE DIFFERENCE</p>
             <button>GET TO KNOW</button></div>
-            </div>', // cms page content
+            </div>
+            <div class="carousel">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="4" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>', // cms page content
             'layout_update_xml' => '', // cms page layout xml
             'url_key' => self::IDENTIFIER_NAME, // cms page url key
             'is_active' => 1, // status enabled or disabled
@@ -151,26 +152,27 @@ class CmsHomeAutomotive implements DataPatchInterface
             <h2>UNIQUE.</h2>
             <h2>JUST LIKE YOU.</h2>
             </div>
-            <button>CUSTOMIZE</button></div>
+            <button><a href="{{config path="web/unsecure/base_url"}}volt-3-s-plaid.html">CUSTOMIZE</button></div>
             </div>
             <div class="row">
             <div class="cards card1-col"><a href="{{config path="web/unsecure/base_url"}}acessorios/carregamento.html"><img src="{{media url="wysiwyg/charging.png"}}" alt="">
             <div>
             <p>CHARGING ACCESSORIES</p>
-            <button>BUY NOW</button></div>
+            <button><a href="{{config path="web/unsecure/base_url"}}acessorios/carregamento.html">BUY NOW</button></div>
             </div>
-            <div class="cards card2-col"><a href="#"><img src="{{media url="wysiwyg/find_store.png"}}" alt="">
+            <div class="cards card2-col"><img src="{{media url="wysiwyg/find_store.png"}}" alt="">
             <div>
             <p>FIND A STORE</p>
             <button>SEARCH</button></div>
             </div>
             </div>
             </div>
-            <div class="details-banner"><a href="#"></a><img src="{{media url="wysiwyg/Agrupar_1.png"}}" alt="">
+            <div class="details-banner"><a href="#"><img src="{{media url="wysiwyg/Agrupar_1.png"}}" alt=""></a>
             <div>
             <p>LITTLE DETAILS THAT MAKES A WHOLE DIFFERENCE</p>
             <button>GET TO KNOW</button></div>
-            </div>', // cms page content
+            </div>
+            <div class="carousel">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="4" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>', // cms page content
             'layout_update_xml' => '', // cms page layout xml
             'url_key' => self::IDENTIFIER_NAME, // cms page url key
             'is_active' => 1, // status enabled or disabled

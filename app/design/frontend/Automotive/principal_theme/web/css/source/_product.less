@@ -18,6 +18,12 @@
         .columns {
             .column.main {
                 .product-info-main {
+                    .bundle-actions {
+                        button {
+                            background-color: @black;
+                            border: none;
+                        }
+                    }
                     .product-reviews-summary.empty {
                         .reviews-actions {
                             .action.add {
@@ -72,6 +78,113 @@
                             }
                         }
                     }
+                }
+
+                // Checkout page
+                .cart-container {
+                    .checkout-methods-items {
+                        .item {
+                            .action.primary {
+                                background: @black;
+                                border: none;
+                            }
+                            .action.multicheckout {
+                                color: @black;
+                            }
+                        }
+                    }
+                    .cart.main.actions {
+                        .action.update {
+                            background: @black;
+                            border: none;
+                            color: @white;
+                        }
+                    }
+                    .cart-discount {
+                        .content {
+                            #discount-coupon-form {
+                                .primary {
+                                    .action.apply.primary {
+                                        background: @black;
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+                        .title {
+                            strong {
+                                color: @black;
+                            }
+                        }
+                    }
+                }
+                .checkout-container {
+                    .authentication-wrapper {
+                        .action-auth-toggle {
+                            span {
+                                color: @black;
+                            }
+                        }
+                    }
+                }
+
+                .checkout-success {
+                    .primary {
+                        .action.primary.continue {
+                            background: @black;
+                            border: none;
+                        }
+                    }
+                }
+
+                #registration {
+                    &:nth-child(4) {
+                        .action.primary {
+                            background: @black;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.checkout-shipping-method {
+    .actions-toolbar {
+        .primary {
+            .button.action {
+                background: @black;
+                border: none;
+            }
+        }
+    }
+    .payment-option-title {
+        .action-toggle {
+            color: @black;
+        }
+    }
+}
+
+.checkout-payment-method {
+    .payment-option-content {
+        .form-discount {
+            .actions-toolbar {
+                .primary {
+                    .action.action-apply {
+                        background: @black;
+                        border: none;
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+    .payment-method-content {
+        .actions-toolbar {
+            .primary {
+                .action.primary {
+                    background: @black;
+                    border: none;
                 }
             }
         }
