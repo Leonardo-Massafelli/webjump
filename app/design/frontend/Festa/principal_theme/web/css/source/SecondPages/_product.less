@@ -20,6 +20,10 @@
                                     .action.tocart.primary {
                                         background: @orange;
                                         border: none;
+                                        &:hover{
+                                            background-color: @dark-orange;
+                                        }
+
                                     }
                                 }
                             }
@@ -29,6 +33,26 @@
             }
             .sidebar.sidebar-additional{
                 font-family: "Poppins-Medium";
+                .block-content{
+                    .actions-toolbar{
+                        .primary{
+                            a{
+                                color: @white;
+                                background: @orange;
+                                border: none;
+                                &:hover{
+                                    background-color: @dark-orange;
+                                }
+                            }
+                        }
+                        .secondary{
+                            a{
+                                color: @pink
+                            }
+
+                        }
+                    }
+                }
             }
         }
     }
