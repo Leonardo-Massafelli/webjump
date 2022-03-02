@@ -1,0 +1,352 @@
+.page-wrapper {
+    font-family: 'Poppins-Medium';
+
+    .maincontent{
+        .page-title-wrapper{
+            h1{
+                span{
+                    font-family: "Poppins-Medium";
+                }
+            }
+        }
+
+        .columns{
+            .sidebar.sidebar-additional{
+                font-family: "Poppins-Medium";
+            }
+        }
+    }
+    .breadcrumbs{
+        margin-top: 10px;
+        .items{
+            color: @dark-purple;
+            li{
+                a{
+                    color: @pink;
+                }
+            }
+        }
+    }
+    .page.messages{
+        .message-success.success.message{
+            a{
+                color: @pink
+            }
+        }
+    }
+    // .toolbar.toolbar-products{
+    //     .toolbar-sorter.sorter{
+    //         .sorter-options{
+
+    //         }
+    //     }
+    // }
+
+
+    .products.wrapper.grid.products-grid{
+
+        ol{
+            li{
+                .product-item-info{
+                    .product.details.product-item-details{
+                        a{
+
+                            font-size: 15px;
+                            text-align: left;
+                            letter-spacing: 0.20px;
+
+                        }
+                    }
+                    .price-box.price-final_price{
+                        span{
+                            font-family: "Poppins-Bold";
+                            color: @pink;
+                            letter-spacing: -0.19px;
+                            line-height: 24.97px;
+
+                        }
+                    }
+                }
+            }
+        }
+        .product-item-inner{
+            .product.actions.product-item-actions{
+                .actions-primary{
+                    form{
+                        button{
+                                background: @orange;
+                                font-family: 'Poppins-Bold';
+                                border: none;
+                                border-radius: 10px;
+                                width: 209px;
+                                height: 55px;
+                                font-size: 20px;
+                            &:hover{
+                                background: @dark-orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .products.wrapper.list.products-list{
+        ol{
+            li{
+                button{
+                    background: @orange;
+                    font-family: 'Poppins-Bold';
+                    border: none;
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 55px;
+                &:hover{
+                    background: @dark-orange;
+                }
+                }
+            }
+        }
+    }
+
+    .bundle-options-container{
+        .block-bundle-summary{
+            .box-tocart{
+                .action.primary{
+                    background: @orange;
+                    border: none;
+                    font-family: 'Poppins-Bold';
+                    font-size: 20px;
+                    &:hover{
+                        background: @dark-orange;
+                    }
+                }
+            }
+        } 
+    }
+    .checkout-container{
+        .authentication-wrapper{
+            .modal-custom.authentication-dropdown.custom-slide{
+                .modal-inner-wrap{
+                    .block-authentication{
+                        .actions-toolbar >{
+                            .primary{
+                                .action{
+                                    background: @pink;
+                                    border: none;
+                                    &:hover{
+                                        background: @dark-purple;
+                                    }
+                                    span{
+                                        color: @white;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                            .secondary{
+                                a{
+                                    color: @pink
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            button{
+                span{
+                    color: @pink;
+                    font-family: 'Poppins-Bold';
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .checkout-shipping-method{
+            .actions-toolbar{
+                .action.primary.button{
+                    background: @orange;
+                    border: none;
+                    font-family: 'Poppins-Bold';
+                    font-size: 20px;
+                    &:hover{
+                        background: @dark-orange;
+                    }
+                }
+            }
+        }  
+    }
+    .product-add-form{
+        .product-options-bottom{
+            .box-tocart .action.tocart:not(:last-child){
+                background: @orange;
+                border: none;
+                font-family: 'Poppins-Bold';
+                font-size: 20px;
+                &:hover{
+                    background: @dark-orange;
+                }
+            }
+        }
+        .product-options-wrapper{
+            .field.downloads.required{
+                .control{
+                    .label{
+                        a{
+                            color:@pink
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .product.info.detailed{
+        .block.review-add{
+            form{
+                .primary.actions-primary{
+                    button{
+                    background: @pink;
+                    color: @white;
+                    font-family: "Poppins-Bold";
+                    border: none;
+                    height: 32px;
+                    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+            
+        
+    
+}
+
+//MEDIA QUERIES
+// @media screen and (max-width:1207px) {
+//     .page-wrapper{
+//         .page-main{
+//             .columns{
+//                 .column.main{
+//                     .products.wrapper.grid.products-grid{
+//                         .product-item-inner{
+//                             .product.actions.product-item-actions{
+//                                 .actions-primary{
+//                                     form{
+//                                         button{
+//                                             width: 168px;
+//                                         }
+//                                     }
+//                                 }
+//                             }
+//                         } 
+//                     }
+//                 } 
+//             }
+//         }
+//     }    
+// }
+// @media screen and (max-width:1023px) {
+//     .page-wrapper{
+//         .page-main{
+//             .columns{
+//                 .column.main{
+//                     .products.wrapper.grid.products-grid{
+//                         .product-item-inner{
+//                             .product.actions.product-item-actions{
+//                                 .actions-primary{
+//                                     form{
+//                                         button{
+//                                             width: 240px;
+//                                         }
+//                                     }
+//                                 }
+//                             }
+//                         } 
+//                     }
+//                 } 
+//             }
+//         }
+//     }    
+// }
+// @media screen and (max-width:990px) {
+//     .page-wrapper{
+//         .page-main{
+//             .columns{
+//                 .column.main{
+//                     .products.wrapper.grid.products-grid{
+//                         .product-item-inner{
+//                             .product.actions.product-item-actions{
+//                                 .actions-primary{
+//                                     form{
+//                                         button{
+//                                             width: 240px;
+//                                         }
+//                                     }
+//                                 }
+//                             }
+//                         } 
+//                     }
+//                 } 
+//             }
+//         }
+//     }    
+// }
+
+@media screen and (max-width:471px) {
+    .page-main{
+        .columns{
+            .column.main{
+                .products.wrapper.grid.products-grid{
+                    .products.list.items.product-items{
+                        li{
+                            width: calc((101% - 2%)/2);
+                        }
+                    }
+                }
+
+                 
+            }
+        }
+         
+    } 
+}
+
+@media screen and (max-width:380px) {
+    .page-main{
+        .columns{
+            .column.main{
+                .toolbar.toolbar-products{
+                    .toolbar-sorter.sorter{
+                        label{
+                            display: none
+                        }
+                    }
+                }
+                .product-item-inner{
+                    .product.actions.product-item-actions{
+                        .actions-primary{
+                            form{
+                                button{
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                 
+            }
+        }
+         
+    } 
+}
+
+
+
+
+
+
+
+

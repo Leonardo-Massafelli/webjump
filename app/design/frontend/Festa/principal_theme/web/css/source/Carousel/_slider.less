@@ -1,0 +1,89 @@
+.page-wrapper {
+    .page-main {
+        .columns {
+            .column.main {
+
+                .mainslider {
+                    margin: 40px 40px 0 60px;
+
+                    .block.widget.block-products-list.grid{
+                        ol{
+                            .slick-list.draggable{
+                                .slick-track{
+                                        li{
+                                            height: 520px;
+                                            margin-top: 10px;
+
+                                            .product-item-details{
+                                                color:@pink;
+                                                strong{
+                                                    a{
+                                                        color:@grey-rock;
+                                                        text-align: left;
+                                                        line-height: 18.23px;
+                                                        letter-spacing: 0.76px;
+                                                    }
+                                                }
+                                                .price-box.price-final_price{
+                                                    font-size: 20px;
+                                                }
+                                                form{
+                                                    button{
+                                                        background: @orange;
+                                                        border: none;
+                                                        font-family: 'Poppins-Bold';
+                                                        border-radius: 10px;
+                                                        width: 231px;
+                                                        height: 55px;
+                                                        font-size: 20px;
+                                                        &:hover{
+                                                            background: @dark-orange;
+                                                        }
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                }
+                            }
+                            .slick-prev.slick-arrow{
+                                top: 40%;
+                                left: -50px;
+                                height: 53px;
+                                width: 27px;
+                                border: none;
+                                box-shadow: none;
+                                &::before{
+                                    content: '';
+                                    display: block;
+                                    width: 27px;
+                                    height: 53px;
+                                    margin: 0 10px 0 0;
+                                    background: url('@{baseDir}images/arrow_left.png') no-repeat 50% 50%;
+                                }
+                            }
+                            .slick-next.slick-arrow{
+                                top: 40%;
+                                height: 53px;
+                                width: 27px;
+                                border: none;
+                                box-shadow: none;
+                                &::before{
+                                    content: '';
+                                    display: block;
+                                    background-color: @black;
+                                    width: 27px;
+                                    height: 53px;
+                                    margin: 0 10px 0 0;
+                                    background: url('@{baseDir}images/arrow_right.png') no-repeat 50% 50%;
+                                }
+                            }
+                        }
+                            
+                    }
+
+                }
+            }
+        }
+    }
+}
