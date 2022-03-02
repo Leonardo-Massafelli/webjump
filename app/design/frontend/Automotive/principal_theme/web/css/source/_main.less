@@ -203,6 +203,7 @@ body.cms-index-index {
                                         }
                                         .slick-slide {
                                             max-width: 430px;
+                                            width: 550px;
 
                                             .product-item {
                                                 .product-item-info {
@@ -216,6 +217,14 @@ body.cms-index-index {
                                                             font-family: "chakraPetch";
                                                             font-weight: 500;
                                                             color: @white;
+                                                            overflow: hidden;
+                                                            text-overflow: ellipsis;
+                                                            display: -webkit-box;
+                                                            -webkit-line-clamp: 2; /* number of lines to show */
+                                                            line-clamp: 2;
+                                                            -webkit-box-orient: vertical;
+                                                            min-height: 80px;
+
                                                             &:hover {
                                                                 text-decoration: none;
                                                             }
@@ -622,6 +631,36 @@ body.cms-index-index {
                                 margin: 19px 0 49px 0;
                                 font-family: "Montserrat";
                                 font-weight: 400;
+                            }
+                        }
+                    }
+
+                    .block-products-list {
+                        .block-content {
+                            .products-grid.grid {
+                                .widget-product-grid {
+                                    .slick-list.draggable {
+                                        .slick-track {
+                                            .slick-slide {
+                                                .product-item {
+                                                    .product-item-info {
+                                                        .product-item-details {
+                                                            .product-item-inner {
+                                                                .product-item-actions {
+                                                                    form {
+                                                                        button {
+                                                                            height: 36px;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
