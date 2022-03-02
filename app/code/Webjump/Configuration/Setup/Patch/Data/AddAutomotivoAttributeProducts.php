@@ -14,9 +14,9 @@ use Magento\Eav\Model\Entity\Attribute\SetFactory as AttributeSetFactory;
 
 class AddAutomotivoAttributeProducts implements DataPatchInterface
 {
-    const AUTOMOTIVO_AUTO = 'Automatico';
+    const AUTOMOTIVO_AUTO = 'automatico';
 
-    const AUTOMOTIVO_AR_CONDICIONADO = 'Ar_condicionado';
+    const AUTOMOTIVO_AR_CONDICIONADO = 'ar_condicionado';
 
     const AUTOMOTIVO_COLOR = 'color';
 
@@ -78,14 +78,13 @@ class AddAutomotivoAttributeProducts implements DataPatchInterface
             [
                 'attribute_set' => 'Automotivo',
                 'user_defined' => true,
-                'type' => 'text',
+                'type' => 'int',
                 'label' => 'Ar condicionado',
                 'input' => 'boolean',
                 'source' => 'Magento\Eav\Model\Entity\Attribute\Source\Boolean',
                 'required' => false,
                 'global' => ScopedAttributeInterface::SCOPE_STORE,
                 'used_in_product_listing' => true,
-                'system' => false,
                 'visible_on_front' => true,
             ]
         );
@@ -104,14 +103,13 @@ class AddAutomotivoAttributeProducts implements DataPatchInterface
             [
                 'attribute_set' => 'Automotivo',
                 'user_defined' => true,
-                'type' => 'text',
+                'type' => 'int',
                 'label' => 'Automático',
                 'input' => 'boolean',
                 'source' => 'Magento\Eav\Model\Entity\Attribute\Source\Boolean',
                 'required' => false,
                 'global' => ScopedAttributeInterface::SCOPE_STORE,
                 'used_in_product_listing' => true,
-                'system' => false,
                 'visible_on_front' => true,
             ]
         );
