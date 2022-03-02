@@ -10,12 +10,26 @@
                         ol{
                             .slick-list.draggable{
                                 .slick-track{
+                                    display: flex;
+                                    text-align: center;
+                                    justify-content: center;
+                                    align-items: center;
+                                    
                                         li{
                                             height: 520px;
                                             margin-top: 10px;
 
                                             .product-item-details{
                                                 color:@pink;
+                                                .product-item-inner{
+                                                    clip: unset;
+                                                    overflow: visible;
+                                                    border: none;
+                                                    display: table;
+                                                    margin: 0 auto;
+                                                    box-shadow: none;
+                                                    border: none;
+                                                }
                                                 strong{
                                                     a{
                                                         color:@grey-rock;
