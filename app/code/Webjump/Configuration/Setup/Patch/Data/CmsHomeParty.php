@@ -71,19 +71,20 @@ class CmsHomeParty implements DataPatchInterface
         $partyEn = $this->storeRepository->get(CreateWebsites::FESTA_EN_STORE_CODE)->getId();
 
         $pageData = [
-            'title' => 'Home Party', // cms page title
+            'title' => 'Festival', // cms page title
             'page_layout' => '1column', // cms page layout
             'meta_keywords' => '', // cms page meta keywords
             'meta_description' => '', // cms page meta description
             'identifier' => self::IDENTIFIER_NAME, // cms page identifier
             'content_heading' => '', // cms page content heading
-            'content' => '<div class="banner"><a href="{{config path="web/unsecure/base_url"}}datascomemorativas/halloween.html"><img src="{{media url="wysiwyg/main-banner.png"}}" alt=""></a></div>
-            <div class="flex-cards">
-            <div class="festaJunina"><a href="{{config path="web/unsecure/base_url"}}datascomemorativas/festa-junina.html"> <img src="{{media url="wysiwyg/festa_junina.png"}}" alt=""> </a></div>
-            <div class="carnaval"><a href="{{config path="web/unsecure/base_url"}}datascomemorativas/carnaval.html"> <img src="{{media url="wysiwyg/carnaval.png"}}" alt=""> </a></div>
-            <div class="aniversario"><a href="{{config path="web/unsecure/base_url"}}datascomemorativas/aniversario.html"> <img src="{{media url="wysiwyg/aniversario.png"}}" alt=""> </a></div>
-            </div>
-            <div class="promo-card"><a href="{{config path="web/unsecure/base_url"}}baloes-bexigas.html"><img src="{{media url="wysiwyg/promotions.png"}}" alt=""></a></div>', // cms page content
+            'content' => '<div class="banner"><a href="{{config path="web/unsecure/base_url"}}datascomemorativas/halloween.html"></a></div>
+                <div class="flex-cards">
+                <div class="festaJunina"><a href="{{config path="web/unsecure/base_url"}}datascomemorativas/festa-junina.html"> <img src="{{media url="wysiwyg/festa_junina.png"}}" alt=""> </a></div>
+                <div class="carnaval"><a href="{{config path="web/unsecure/base_url"}}datascomemorativas/carnaval.html"> <img src="{{media url="wysiwyg/carnaval.png"}}" alt=""> </a></div>
+                <div class="aniversario"><a href="{{config path="web/unsecure/base_url"}}datascomemorativas/aniversario.html"> <img src="{{media url="wysiwyg/aniversario.png"}}" alt=""> </a></div>
+                </div>
+                <div class="promo-card"><a href="{{config path="web/unsecure/base_url"}}baloes-bexigas.html"><img src="{{media url="wysiwyg/banner_promos.png"}}" alt=""></a></div>
+                <div class="mainslider">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="6" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>', // cms page content
             'layout_update_xml' => '', // cms page layout xml
             'url_key' => self::IDENTIFIER_NAME, // cms page url key
             'is_active' => 1, // status enabled or disabled
@@ -104,19 +105,20 @@ class CmsHomeParty implements DataPatchInterface
         $this->moduleDataSetup->endSetup();
 
         $pageDataEn = [
-            'title' => 'Home Party', // cms page title
+            'title' => 'Festival', // cms page title
             'page_layout' => '1column', // cms page layout
             'meta_keywords' => '', // cms page meta keywords
             'meta_description' => '', // cms page meta description
             'identifier' => self::IDENTIFIER_NAME, // cms page identifier
             'content_heading' => '', // cms page content heading
-            'content' => '<div class="banner"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/halloween-en.html"><img src="{{media url="wysiwyg/main-banner.png"}}" alt=""></a></div>
-            <div class="flex-cards">
-            <div class="festaJunina"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/feast-of-saint-john.html"> <img src="{{media url="wysiwyg/festa_junina.png"}}" alt=""> </a></div>
-            <div class="carnaval"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/carnival.html"> <img src="{{media url="wysiwyg/carnaval.png"}}" alt=""> </a></div>
-            <div class="aniversario"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/birthday.html"> <img src="{{media url="wysiwyg/aniversario.png"}}" alt=""> </a></div>
-            </div>
-            <div class="promo-card"><a href="{{config path="web/unsecure/base_url"}}baloons.html"><img src="{{media url="wysiwyg/promotions.png"}}" alt=""></a></div>', // cms page content
+            'content' => '<div class="banner"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/halloween-en.html"></a></div>
+                <div class="flex-cards">
+                <div class="festaJunina"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/feast-of-saint-john.html"> <img src="{{media url="wysiwyg/festa_junina.png"}}" alt=""> </a></div>
+                <div class="carnaval"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/carnival.html"> <img src="{{media url="wysiwyg/carnaval.png"}}" alt=""> </a></div>
+                <div class="aniversario"><a href="{{config path="web/unsecure/base_url"}}commemorative-dates/birthday.html"> <img src="{{media url="wysiwyg/aniversario.png"}}" alt=""> </a></div>
+                </div>
+                <div class="promo-card"><a href="{{config path="web/unsecure/base_url"}}baloons.html"><img src="{{media url=&quot;wysiwyg/banner_promos.png&quot;}}" alt="" /></a></div>
+                <div class="mainslider">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="6" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>', // cms page content
             'layout_update_xml' => '', // cms page layout xml
             'url_key' => self::IDENTIFIER_NAME, // cms page url key
             'is_active' => 1, // status enabled or disabled
