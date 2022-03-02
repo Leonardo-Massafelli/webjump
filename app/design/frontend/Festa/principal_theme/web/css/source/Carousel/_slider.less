@@ -8,6 +8,9 @@
 
                     .block.widget.block-products-list.grid{
                         ol{
+                            .slick-slide{
+                                height: 530px
+                            }
                             .slick-list.draggable{
                                 .slick-track{
                                     display: flex;
@@ -15,19 +18,26 @@
                                     align-items: center;
                                         .slick-active{
                                             width: 400px;
+
                                         }
 
                                         li{
-                                            height: 520px;
+                                            height: 550px;
                                             margin-top: 10px;
                                             .product-item-info{
-                                                    border-color: white;
-                                                    box-shadow: none;
-                                                }
+                                                border-color: white;
+                                                box-shadow: none;
+                                            }
 
                                             .product-item-details{
                                                 color:@pink;
                                                 margin-left: 10px;
+                                                height: 93px;
+                                                .product-reviews-summary.short{
+                                                    .reviews-actions{
+                                                        display: none;
+                                                    }
+                                                }
                                                 .product-item-inner{
                                                     clip: unset;
                                                     overflow: visible;
