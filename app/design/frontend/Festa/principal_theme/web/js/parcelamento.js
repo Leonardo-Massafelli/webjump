@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
             installment.textContent = installmentRender;
         } else {
             const points = numToStr.substring(0, 2);
-            const installmentRender = `Parcele em até 10x com parcela mínima de $0.${points}`;
+            const installmentRender = `Installment up to 10x with a minimum installment of $0.${points}`;
 
             installment.textContent = installmentRender;
         }
