@@ -12,6 +12,19 @@
 
         .columns{
             .column.main{
+                .product-info-main{
+                    .bundle-actions{
+                        .action.primary.customize{
+                            background: @orange;
+                            border: none;
+                            font-family: 'Poppins-Bold';
+                            font-size: 20px;
+                            &:hover{
+                                background: @dark-orange;
+                            }
+                        }
+                    }
+                } 
                 .data.table.table-comparison {
                     .cell.product.info {
                         .product-item-actions.hidden-print {
@@ -288,13 +301,59 @@
 
             }
         }
-    }  
+    }
+ 
+}
 
+.modals-wrapper{
+    .modal-inner-wrap{
+        .modal-content{
+            .block-authentication{
+                .block.block-new-customer{
+                    .block-content{
+                        .actions-toolbar >{
+                            .primary{
+                                .action{
+                                    background: @orange;
+                                    border: none;
+                                    font-family: 'Poppins-Bold';
+                                    font-size: 20px;
+                                    &:hover{
+                                        background: @dark-orange;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .block.block-customer-login{
+                    .block-content{
+                        .form.form-login{
+                            .actions-toolbar{
+                                .primary{
+                                    button{
+                                        background: @pink;
+                                        color: @white;
+                                        font-family: "Poppins-Bold";
+                                        border: none;
+                                        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+                                    }
+                                }
+                                .secondary{
+                                    .action{
+                                        color: @pink;
+                                        font-family: 'Poppins-Bold';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
-
-            
+        }
         
-    
+    }
 }
 
 //MEDIA QUERIES
