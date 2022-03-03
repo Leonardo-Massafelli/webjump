@@ -8,7 +8,7 @@ class AdditionalConfigVars implements ConfigProviderInterface
 {
     public function getConfig()
     {
-        $additionalVariables['test_var'] = 'Test Var';
+        $additionalVariables['checkout_var'] = 'Checkout Var';
         return $additionalVariables;
     }
 }
