@@ -19,19 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const installmentRule = (strToNum / 10).toFixed(2);
 
         const numToStr = String(installmentRule);
+        console.log(numToStr);
 
         if (numToStr.length > 8) {
             const points = numToStr.substring(0, 2);
             const rest = numToStr.substring(2, 5);
             const formatedPrice = `${points}.${rest}`;
+            console.log(formatedPrice, ">8");
 
             const installmentRender = `Parcele em até 10x com parcela mínima de R$ ${formatedPrice}`;
 
             installment.textContent = installmentRender;
-        } else if (numToStr.length === 8) {
-            const points = numToStr.substring(0, 3);
-            const rest = numToStr.substring(6, 8);
+        } else if (numToStr.length === 6) {
+            const points = numToStr.substring(0, 1);
+            const rest = numToStr.substring(1, 3);
             const formatedPrice = `${points}.${rest}`;
+            console.log(formatedPrice, "=== 6");
             const installmentRender = `Parcele em até 10x com parcela mínima de R$ ${formatedPrice}`;
 
             installment.textContent = installmentRender;
@@ -67,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const rest = numToStr.substring(1, 3);
             // const cents = numToStr.substring(4, 6);
             const formatedPrice = `${points}.${rest}`;
-            console.log(formatedPrice);
+
             const installmentRender = `Installment up to 10x with a minimum installment of $${formatedPrice}`;
 
             installment.textContent = installmentRender;
