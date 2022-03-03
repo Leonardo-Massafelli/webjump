@@ -177,3 +177,29 @@
         }
     }
 }
+
+//MEDIA QUERIES
+
+
+@media screen and (max-width:767px) {
+    .page-wrapper{
+        .minicart-wrapper{
+            margin-top: 6px;
+        
+            .action.showcart{
+                display: flex;
+                align-items: center;
+        
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 25px;
+                    margin: 5px 10px 0 0;
+                    background: url('@{baseDir}images/bag.png') no-repeat 50% 50%;
+                }
+            }
+        }
+        
+    }
+}
