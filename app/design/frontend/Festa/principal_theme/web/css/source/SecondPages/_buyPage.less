@@ -103,6 +103,15 @@
             } 
         }
     }
+}
+.checkout-container{
+    .opc-progress-bar{
+        .opc-progress-bar-item{
+            span{
+                color: @pink;
+            }
+        }
+    }
 }   
 
 .checkout-success{
@@ -134,3 +143,109 @@
         }
     }
 }
+
+.cart-container{
+    form{
+        .cart.main.actions{
+            .action.update{
+                background: @pink;
+                color: @white;
+                font-family: "Poppins-Bold";
+                box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+            }
+        }
+    }
+    .cart-summary{
+        ul{
+            li{
+                a{
+                    color: @pink;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                .action.primary.checkout{
+                    background: @orange;
+                    font-family: "Poppins-Bold";
+                    border: none;
+                    border-radius: 10px;
+                    &:hover{
+                        background: @dark-orange;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    .cart-discount{
+        .title{
+            strong{
+                color: @pink;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+        }
+        .content{
+            form{
+                .fieldset.coupon{
+                    .field{
+                        .control{
+                            input{
+                                font-family: 'Poppins-Light';
+                                color: @black;
+                            }
+                        }
+
+                    }
+                    .actions-toolbar{
+                        .primary{
+                            button{
+                                background: @pink;
+                                color: @white;
+                                font-family: "Poppins-Bold";
+                                border: none;
+                                height: 32px;
+                                box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+.opc-wrapper{
+    form{
+        .fieldset.hidden-fields{
+            .actions-toolbar{
+                .action.login.primary{
+                    background: @orange;
+                    font-family: "Poppins-Bold";
+                    border: none;
+                    &:hover{
+                        background: @dark-orange;
+                        border: none;
+                    }
+                }
+                .secondary{
+                    a{
+                        color: @pink
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.cart-empty{
+    p{
+        a{
+            color: @pink
+        }
+    }
+}
+
