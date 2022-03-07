@@ -194,6 +194,31 @@
                         }
                     }
                 }
+                .checkout-container {
+                    .opc-progress-bar {
+                        .opc-progress-bar-item._active {
+                            &::before {
+                                background: @black;
+                                border-color: @black;
+                            }
+
+                            span {
+                                &::before {
+                                    background: @black;
+                                    border-color: @black;
+                                }
+                            }
+                            span::after {
+                                border-color: @black;
+                            }
+                        }
+                        .opc-progress-bar-item._complete {
+                            span {
+                                color: @black;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -236,6 +261,12 @@
                     border: none;
                 }
             }
+        }
+    }
+
+    .payment-option-title {
+        .action-toggle {
+            color: @black;
         }
     }
 }
