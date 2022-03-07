@@ -55,7 +55,14 @@
 }
 
 .checkout-payment-method{
+    .payment-method-title.field.choice{
+        input{
+            accent-color: @orange;
+        }
+        
+    }
     .payment-option-title{
+
         .action-toggle {
             span{
                 color: @pink;
@@ -63,6 +70,32 @@
                     text-decoration: underline;
                 }
 
+            }
+        }
+    }
+    .payment-method-content{
+        .payment-method-billing-address{
+            .billing-address-same-as-shipping-block.field.choice{
+                input{
+                    accent-color: @orange;
+                }
+
+            }
+            .checkout-billing-address{
+                .billing-address-details{
+                    a{
+                        color: @pink;
+                    }
+                }
+                fieldset{
+                    .actions-toolbar{
+                        .action.action-cancel{
+                            width: 90px;
+                            height: 24px;
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
         }
     }
@@ -104,10 +137,27 @@
         }
     }
 }
-.checkout-container{
-    .opc-progress-bar{
-        .opc-progress-bar-item{
-            span{
+.checkout-container {
+    .opc-progress-bar {
+        .opc-progress-bar-item._active {
+            &::before {
+                background: @orange;
+                border-color: @orange;
+            }
+
+            span {
+                color: @pink;
+                &::before {
+                    background: @orange;
+                    border-color: @orange;
+                }
+            }
+            span::after {
+                border-color: @orange;
+            }
+        }
+        .opc-progress-bar-item._complete {
+            span {
                 color: @pink;
             }
         }
@@ -217,6 +267,20 @@
         }
     }
 }
+.modal-custom.opc-sidebar.opc-summary-wrapper.custom-slide{
+    .modal-inner-wrap{
+        .modal-content{
+            .ship-to{
+                .shipping-information-content{
+                    a{
+                        color: @pink;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .opc-wrapper{
     form{
         .fieldset.hidden-fields{
