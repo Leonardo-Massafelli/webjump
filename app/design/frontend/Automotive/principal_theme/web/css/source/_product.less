@@ -141,6 +141,68 @@
                             }
                         }
                     }
+                    .opc-wrapper {
+                        .opc {
+                            .checkout-shipping-method {
+                                .checkout-shipping-method {
+                                    .step-content {
+                                        .form.methods-shipping {
+                                            #checkout-shipping-method-load {
+                                                .table-checkout-shipping-method {
+                                                    tbody {
+                                                        .row {
+                                                            .col.col-method {
+                                                                .radio {
+                                                                    accent-color: @black;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .checkout-payment-method {
+                                .step-content {
+                                    .form.payments {
+                                        .fieldset {
+                                            #checkout-payment-method-load {
+                                                .items.payment-methods {
+                                                    .payment-group {
+                                                        .payment-method._active {
+                                                            .radio {
+                                                                accent-color: @black;
+                                                            }
+                                                            .payment-method-content {
+                                                                .payment-method-billing-address {
+                                                                    .checkout-billing-address {
+                                                                        #billing-address-same-as-shipping-banktransfer {
+                                                                            accent-color: @black;
+                                                                        }
+                                                                        #billing-address-same-as-shipping-checkmo {
+                                                                            accent-color: @black;
+                                                                        }
+
+                                                                        .billing-address-details {
+                                                                            a {
+                                                                                color: @black;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
                 .checkout-success {
@@ -193,6 +255,17 @@
                             }
                         }
                     }
+                    .product-add-form {
+                        form {
+                            .bundle-options-wrapper {
+                                .action.back.customization {
+                                    span {
+                                        color: @black;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 .checkout-container {
                     .opc-progress-bar {
@@ -214,6 +287,78 @@
                         }
                         .opc-progress-bar-item._complete {
                             span {
+                                color: @black;
+                            }
+                        }
+                    }
+                    .modal-custom.opc-sidebar.opc-summary-wrapper {
+                        .modal-inner-wrap {
+                            .modal-content {
+                                .shipping-information {
+                                    .ship-to {
+                                        a {
+                                            color: @black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .product.info.detailed {
+                    .product.data.items {
+                        .data.item.content {
+                            .block.review-add {
+                                .block-content {
+                                    form {
+                                        .primary.actions-primary {
+                                            button {
+                                                background: @black;
+                                                border-color: @black;
+                                                color: @white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .product-add-form {
+                    .fieldset {
+                        .field.downloads.required {
+                            .field.choice {
+                                .label {
+                                    .sample.link {
+                                        color: @black;
+                                    }
+                                }
+                                input {
+                                    accent-color: @black;
+                                }
+                            }
+                        }
+                        .field.downloads.required {
+                            .control {
+                                .field.choice.downloads-all {
+                                    .label {
+                                        span {
+                                            color: @black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .page.messages {
+            div {
+                .messages {
+                    .message-success.success.message {
+                        div {
+                            a {
                                 color: @black;
                             }
                         }
