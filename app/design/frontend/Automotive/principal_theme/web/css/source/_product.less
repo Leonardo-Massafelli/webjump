@@ -254,6 +254,29 @@
                                     }
                                 }
                             }
+                            .checkout-shipping-address {
+                                .step-content {
+                                    .field.addresses {
+                                        .shipping-address-item.selected-item {
+                                            a {
+                                                color: @black;
+                                            }
+                                            border-color: @black;
+
+                                            &::after {
+                                                background: @black;
+                                            }
+                                        }
+                                    }
+                                    .new-address-popup {
+                                        .action.action-show-popup {
+                                            background: @black;
+                                            border: none;
+                                            color: @white;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -554,6 +577,26 @@
                                     span {
                                         color: @black;
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .block.block-reorder {
+                    .form.reorder {
+                        .actions-toolbar {
+                            .primary {
+                                .action.tocart.primary {
+                                    background: @black;
+                                    border-color: @black;
+                                    color: @white;
+                                    border: 0;
+                                }
+                            }
+                            .secondary {
+                                .action.view {
+                                    color: @black;
                                 }
                             }
                         }
