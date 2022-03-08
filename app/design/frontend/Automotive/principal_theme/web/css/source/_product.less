@@ -15,6 +15,11 @@
 // product button
 .page-wrapper {
     .page-main {
+        .page-title-wrapper {
+            .action.print {
+                color: @black;
+            }
+        }
         .columns {
             .column.main {
                 .product-info-main {
@@ -49,6 +54,33 @@
                                         button {
                                             background-color: @black;
                                             border: none;
+                                        }
+                                    }
+                                }
+                                .fieldset {
+                                    .field.qty {
+                                        .control {
+                                            input:focus {
+                                                border: 1px solid #fafafa;
+                                                -webkit-box-shadow: 0 0 6px
+                                                    @black;
+                                                -moz-box-shadow: 0 0 5px @black;
+                                                box-shadow: 0 0 5px @black;
+                                                outline: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .product-options-wrapper {
+                                .field.configurable.required {
+                                    .control {
+                                        select:focus {
+                                            border: 1px solid #fafafa;
+                                            -webkit-box-shadow: 0 0 6px @black;
+                                            -moz-box-shadow: 0 0 5px @black;
+                                            box-shadow: 0 0 5px @black;
+                                            outline: none;
                                         }
                                     }
                                 }
@@ -132,12 +164,123 @@
                             }
                         }
                     }
+                    .cart-summary {
+                        .block.shipping.active {
+                            #co-shipping-method-form {
+                                .fieldset.rate {
+                                    .field.choice.item {
+                                        input {
+                                            accent-color: @black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .form.form-cart {
+                        .cart.table-wrapper {
+                            .cart.item {
+                                .actions-toolbar {
+                                    .use-ajax.action.towishlist.action-towishlist {
+                                        span {
+                                            color: @black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 .checkout-container {
                     .authentication-wrapper {
                         .action-auth-toggle {
                             span {
                                 color: @black;
+                            }
+                        }
+                    }
+                    .opc-wrapper {
+                        .opc {
+                            .checkout-shipping-method {
+                                .checkout-shipping-method {
+                                    .step-content {
+                                        .form.methods-shipping {
+                                            #checkout-shipping-method-load {
+                                                .table-checkout-shipping-method {
+                                                    tbody {
+                                                        .row {
+                                                            .col.col-method {
+                                                                .radio {
+                                                                    accent-color: @black;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .checkout-payment-method {
+                                .step-content {
+                                    .form.payments {
+                                        .fieldset {
+                                            #checkout-payment-method-load {
+                                                .items.payment-methods {
+                                                    .payment-group {
+                                                        .payment-method._active {
+                                                            .radio {
+                                                                accent-color: @black;
+                                                            }
+                                                            .payment-method-content {
+                                                                .payment-method-billing-address {
+                                                                    .checkout-billing-address {
+                                                                        #billing-address-same-as-shipping-banktransfer {
+                                                                            accent-color: @black;
+                                                                        }
+                                                                        #billing-address-same-as-shipping-checkmo {
+                                                                            accent-color: @black;
+                                                                        }
+
+                                                                        .billing-address-details {
+                                                                            a {
+                                                                                color: @black;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .checkout-shipping-address {
+                                .step-content {
+                                    .field.addresses {
+                                        .shipping-address-item.selected-item {
+                                            a {
+                                                color: @black;
+                                            }
+                                            border-color: @black;
+
+                                            &::after {
+                                                background: @black;
+                                            }
+                                        }
+                                    }
+                                    .new-address-popup {
+                                        .action.action-show-popup {
+                                            background: @black;
+                                            border: none;
+                                            color: @white;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -187,7 +330,26 @@
                                                 background: @black;
                                                 border: none;
                                             }
+                                            .input-text.qty:focus {
+                                                border: 1px solid #fafafa;
+                                                -webkit-box-shadow: 0 0 6px
+                                                    @black;
+                                                -moz-box-shadow: 0 0 5px @black;
+                                                box-shadow: 0 0 5px @black;
+                                                outline: none;
+                                            }
                                         }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .product-add-form {
+                        form {
+                            .bundle-options-wrapper {
+                                .action.back.customization {
+                                    span {
+                                        color: @black;
                                     }
                                 }
                             }
@@ -214,6 +376,276 @@
                         }
                         .opc-progress-bar-item._complete {
                             span {
+                                color: @black;
+                            }
+                        }
+                    }
+                    .modal-custom.opc-sidebar.opc-summary-wrapper {
+                        .modal-inner-wrap {
+                            .modal-content {
+                                .shipping-information {
+                                    .ship-to {
+                                        a {
+                                            color: @black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .product.info.detailed {
+                    .product.data.items {
+                        .data.item.content {
+                            .block.review-add {
+                                .block-content {
+                                    form {
+                                        .primary.actions-primary {
+                                            button {
+                                                background: @black;
+                                                border-color: @black;
+                                                color: @white;
+                                            }
+                                        }
+                                        div {
+                                            input:focus,
+                                            textarea:focus {
+                                                border: 1px solid #fafafa;
+                                                -webkit-box-shadow: 0 0 6px
+                                                    @black;
+                                                -moz-box-shadow: 0 0 5px @black;
+                                                box-shadow: 0 0 5px @black;
+                                                outline: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .product-add-form {
+                    .fieldset {
+                        .field.downloads.required {
+                            .field.choice {
+                                .label {
+                                    .sample.link {
+                                        color: @black;
+                                    }
+                                }
+                                input {
+                                    accent-color: @black;
+                                }
+                            }
+                        }
+                        .field.downloads.required {
+                            .control {
+                                .field.choice.downloads-all {
+                                    .label {
+                                        span {
+                                            color: @black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .form-wishlist-items {
+                    .actions-toolbar {
+                        .primary {
+                            button {
+                                background: @black;
+                                border-color: @black;
+                                color: @white;
+                                border: 0;
+                            }
+                        }
+                    }
+                    .products-grid.wishlist {
+                        .product-items {
+                            .product-item-info {
+                                .product-item-inner {
+                                    .box-tocart {
+                                        .fieldset {
+                                            .actions-primary {
+                                                button {
+                                                    background: @black;
+                                                    border-color: @black;
+                                                    color: @white;
+                                                    border: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .block.block-dashboard-info {
+                    .block-content {
+                        .box.box-information {
+                            .box-actions {
+                                a {
+                                    color: @black;
+                                    span {
+                                        color: @black;
+                                    }
+                                }
+                            }
+                        }
+                        .box.box-newsletter {
+                            .box-actions {
+                                a {
+                                    span {
+                                        color: @black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .block.block-dashboard-addresses {
+                    .block-title {
+                        a {
+                            span {
+                                color: @black;
+                            }
+                        }
+                    }
+                    .block-content {
+                        .box.box-billing-address {
+                            .box-actions {
+                                a {
+                                    span {
+                                        color: @black;
+                                    }
+                                }
+                            }
+                        }
+                        .box.box-shipping-address {
+                            .box-actions {
+                                a {
+                                    span {
+                                        color: @black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .checkout-success {
+                    .order-number {
+                        strong {
+                            color: @black;
+                        }
+                    }
+                }
+            }
+            //wishlist
+            .sidebar.sidebar-additional {
+                .block.block-wishlist {
+                    .block-content {
+                        .product-items {
+                            .product-item-info {
+                                .product-item-details {
+                                    .product-item-actions {
+                                        .actions-primary {
+                                            .action.tocart.primary {
+                                                background: @black;
+                                                border-color: @black;
+                                                color: @white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .actions-toolbar {
+                            .primary {
+                                a {
+                                    span {
+                                        color: @black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .block.block-compare {
+                    .block-content {
+                        .actions-toolbar {
+                            .primary {
+                                a {
+                                    background: @black;
+                                    border-color: @black;
+                                    color: @white;
+                                    border: 0;
+                                }
+                            }
+                            .secondary {
+                                a {
+                                    span {
+                                        color: @black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .block.block-reorder {
+                    .form.reorder {
+                        .actions-toolbar {
+                            .primary {
+                                .action.tocart.primary {
+                                    background: @black;
+                                    border-color: @black;
+                                    color: @white;
+                                    border: 0;
+                                }
+                            }
+                            .secondary {
+                                .action.view {
+                                    color: @black;
+                                }
+                            }
+                        }
+                    }
+                    .block-content {
+                        .form.reorder {
+                            .product-items.product-items-names {
+                                .field.item.choice {
+                                    .control {
+                                        input {
+                                            accent-color: @black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .sidebar.sidebar-main {
+                .content.block-collapsible-nav-content {
+                    .nav.items {
+                        .nav.item.current {
+                            strong {
+                                border-color: @black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .page.messages {
+            div {
+                .messages {
+                    .message-success.success.message {
+                        div {
+                            a {
                                 color: @black;
                             }
                         }

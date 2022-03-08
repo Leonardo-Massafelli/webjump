@@ -132,6 +132,16 @@
     .navigation {
         background: @white;
 
+        .level0.active .level-top {
+            border-color: @black;
+        }
+        .level0.has-active > .level-top {
+            border-color: @black;
+        }
+        .level0 .submenu .active > a {
+            border-color: @black;
+        }
+
         ul {
             display: inline-block;
             margin-left: 10px;
