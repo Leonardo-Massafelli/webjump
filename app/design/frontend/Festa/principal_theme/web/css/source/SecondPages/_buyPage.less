@@ -315,13 +315,48 @@
                 .shipping-information-content{
                     a{
                         color: @pink;
+                        
                     }
                 }
             }
         }
     }
 }
+.modals-wrapper{
+    .modal-inner-wrap{
+        .modal-content{
+            #opc-new-shipping-address{
+                .form.form-shipping-address{
+                    .fieldset.address{
+                        input{
+                            accent-color: @orange;
+                        }
+                    }
+                }
 
+            }
+       } 
+       .modal-footer{
+           .action.primary.action-save-address{
+            background: @orange;
+            font-family: "Poppins-Bold";
+            border: none;
+            &:hover{
+                background: @dark-orange;
+                border: none;
+            }
+               span{
+                   color: @white;
+
+               }
+           }
+        span{
+            color: @pink;
+        }
+    }
+    }
+   
+}
 .opc-wrapper{
     form{
         .fieldset.hidden-fields{
