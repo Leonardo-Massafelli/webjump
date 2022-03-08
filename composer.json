@@ -7,13 +7,15 @@
         "AFL-3.0"
     ],
     "config": {
-        "preferred-install": "dist",
+        "preferred-install": "source",
         "sort-packages": true
     },
     "require": {
         "magento/product-community-edition": "2.4.0",
         "magento/composer-root-update-plugin": "~1.0",
-        "webjump/carbono-core": "1.6.4"
+        "webjump/carbono-core": "1.6.4",
+        "webjump/theme-frontend-carbono-party": "master",
+        "webjump/theme-frontend-carbono-automotive": "master"
     },
     "require-dev": {
         "allure-framework/allure-phpunit": "~1.2.0",
@@ -67,7 +69,8 @@
         }
     },
     "version": "2.4.0",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "repositories": [
         {
             "type": "composer",
@@ -132,6 +135,14 @@
         {
             "type": "vcs",
             "url": "git@bitbucket.org:webjump/module-carbono-product-increment-buttons.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:webjump/theme-frontend-carbono-party.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:webjump/theme-frontend-carbono-automotive.git"
         }
     ],
     "extra": {
