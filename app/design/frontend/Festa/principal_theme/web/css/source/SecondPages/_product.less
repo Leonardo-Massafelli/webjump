@@ -45,27 +45,99 @@
                 }
             }
             .sidebar.sidebar-additional{
-                font-family: "Poppins-Medium";
-                .block-content{
-                    .actions-toolbar{
-                        .primary{
-                            a{
-                                color: @white;
-                                background: @orange;
-                                border: none;
-                                &:hover{
-                                    background-color: @dark-orange;
+                .block.block-compare{
+                    .block-content{
+                        .actions-toolbar{
+                            .primary{
+                                a{
+                                    background: @orange;
+                                    border: none;
+                                    font-family: 'Poppins-Bold';
+                                    &:hover{
+                                        background: @dark-orange;
+                                    }
+                                }
+
+        
+                            }
+                            .secondary{
+                                a{
+                                    color: @pink;
                                 }
                             }
                         }
-                        .secondary{
-                            a{
-                                color: @pink
-                            }
 
+                    }
+
+                }
+                .block.block-reorder{
+                    .block-content{
+                        .form.reorder{
+                            ol{
+                                li{
+                                    .field.item.choice{
+                                        accent-color: @orange;
+                                    }
+                                }
+                            }
+                            .actions-toolbar{
+                                .primary{
+                                    button{
+                                        background: @orange;
+                                        border: none;
+                                        color: @white;
+                                        font-family: 'Poppins-Bold';
+                                        &:hover{
+                                            background: @dark-orange;
+                                        }
+                                    }
+                                }
+                                .secondary{
+                                    a{
+                                        color: @pink;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
+                .block.block-wishlist{
+                    .block-content{
+                        ol{
+                            li{
+                                .product-item-info{
+                                    .product-item-actions{
+                                        .actions-primary{
+                                            button{
+                                                background: @orange;
+                                                border: none;
+                                                color: @white;
+                                                font-family: 'Poppins-Bold';
+                                                &:hover{
+                                                    background: @dark-orange;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .actions-toolbar{
+                            .primary{
+                                a{
+                                    color: @pink;
+                                }
+                            }
+                            .secondary{
+                                a{
+                                    color: @pink
+                                }
+    
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -213,7 +285,7 @@
                                     background: @orange;
                                     border: none;
                                     &:hover{
-                                        background: @dark-purple;
+                                        background: @dark-orange;
                                     }
                                     span{
                                         color: @white;
